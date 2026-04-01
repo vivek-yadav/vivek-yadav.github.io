@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Vivek Yadav — Resume</title>
+<style>
+  @page {
+    size: A4;
+    margin: 13mm 16mm 13mm 16mm;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
+    font-size: 9pt;
+    line-height: 1.42;
+    color: #1e1e1e;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ────────────────────────────────
+     HEADER
+  ──────────────────────────────── */
+  .hdr {
+    text-align: center;
+    padding-bottom: 7pt;
+    border-bottom: 1.5px solid #1e3a5f;
+    margin-bottom: 7pt;
+  }
+  .hdr h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0f2035;
+    line-height: 1;
+  }
+  .hdr .role {
+    font-size: 9.5pt;
+    color: #2a5298;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 2.5pt;
+    margin-bottom: 4pt;
+  }
+  .hdr .contacts {
+    font-size: 7.8pt;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 12pt;
+  }
+  .hdr .contacts span::before {
+    content: '•';
+    margin-right: 12pt;
+    color: #2a5298;
+  }
+  .hdr .contacts span:first-child::before { content: ''; margin: 0; }
+
+  /* ────────────────────────────────
+     SECTION
+  ──────────────────────────────── */
+  .sec { margin-bottom: 8pt; }
+  .sec:last-child { margin-bottom: 0; }
+
+  .sec-hdr {
+    font-size: 7.2pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: #2a5298;
+    border-bottom: 0.75px solid #2a5298;
+    padding-bottom: 1.5pt;
+    margin-bottom: 5pt;
+  }
+
+  /* ────────────────────────────────
+     SUMMARY
+  ──────────────────────────────── */
+  .summary {
+    font-size: 8.8pt;
+    color: #2d2d2d;
+    line-height: 1.48;
+  }
+
+  /* ────────────────────────────────
+     SKILLS
+  ──────────────────────────────── */
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .skills-table tr td {
+    font-size: 8.4pt;
+    padding: 1.2pt 0;
+    vertical-align: top;
+  }
+  .skills-table td:first-child {
+    font-weight: 700;
+    color: #0f2035;
+    white-space: nowrap;
+    padding-right: 8pt;
+    width: 36mm;
+  }
+  .skills-table td:last-child { color: #2d2d2d; }
+
+  /* ────────────────────────────────
+     EXPERIENCE
+  ──────────────────────────────── */
+  .job { margin-bottom: 7pt; }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5pt;
+  }
+  .job-title {
+    font-size: 9.2pt;
+    font-weight: 700;
+    color: #0f2035;
+  }
+  .job-date {
+    font-size: 7.8pt;
+    color: #555;
+    white-space: nowrap;
+    margin-left: 6pt;
+    flex-shrink: 0;
+  }
+  .job-co {
+    font-size: 8.2pt;
+    color: #2a5298;
+    font-weight: 600;
+    margin-bottom: 3pt;
+  }
+  .job-co .team {
+    font-weight: 400;
+    color: #666;
+    font-size: 7.8pt;
+  }
+
+  .job ul {
+    margin-left: 11pt;
+  }
+  .job ul li {
+    font-size: 8.5pt;
+    color: #2d2d2d;
+    margin-bottom: 2pt;
+    line-height: 1.4;
+  }
+  .job ul li strong { color: #0f2035; }
+
+  .job-tech {
+    margin-top: 2.5pt;
+    font-size: 7.5pt;
+    color: #555;
+  }
+  .job-tech b { color: #0f2035; font-weight: 700; }
+
+  .job-sep {
+    border: none;
+    border-top: 0.4px solid #dde3ea;
+    margin: 6pt 0;
+  }
+
+  /* ────────────────────────────────
+     EDUCATION / TWO-COL
+  ──────────────────────────────── */
+  .two-col {
+    display: flex;
+    gap: 12pt;
+  }
+  .two-col > div { flex: 1; }
+
+  .edu-item { margin-bottom: 4pt; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-deg { font-size: 8.5pt; font-weight: 700; color: #0f2035; }
+  .edu-school { font-size: 8pt; color: #2a5298; }
+  .edu-meta { font-size: 7.5pt; color: #666; }
+</style>
+</head>
+<body>
+
+<!-- ══════ HEADER ══════ -->
+<div class="hdr">
+  <h1>Vivek Yadav</h1>
+  <div class="role">Principal Software Engineer &nbsp;·&nbsp; Software Architect (SME) &nbsp;·&nbsp; 12+ Years</div>
+  <div class="contacts">
+    <span>Bengaluru, India</span>
+    <span>+91 810 523 7870</span>
+    <span><a href="mailto:vivekyadav.jit@gmail.com">vivekyadav.jit@gmail.com</a></span>
+    <span><a href="https://github.com/vivek-yadav">github.com/vivek-yadav</a></span>
+    <span><a href="https://vivek-yadav.github.io">vivek-yadav.github.io</a></span>
+  </div>
+</div>
+
+<!-- ══════ SUMMARY ══════ -->
+<div class="sec">
+  <div class="sec-hdr">Professional Summary</div>
+  <p class="summary">
+    Principal Software Engineer and Architect with 12+ years delivering distributed systems, cloud-native platforms, and developer tooling at enterprise scale.
+    Currently serving as <strong>SME (Architect)</strong> across Chef-360 — <strong>DMS, Platform Services, and Chef Automate</strong> — at Progress Software, setting architecture standards and driving engineering excellence.
+    Deep expertise in <strong>Go, Kubernetes, microservices, API design, and platform engineering</strong>.
+    Track record of leading teams (up to 12 engineers), building code-generation platforms, unified API gateways, and HA distributed systems.
+    Targeting <strong>Staff / Principal Engineer, Engineering Manager, or Solutions Architect</strong> roles.
+  </p>
+</div>
+
+<!-- ══════ SKILLS ══════ -->
+<div class="sec">
+  <div class="sec-hdr">Technical Skills</div>
+  <table class="skills-table">
+    <tr>
+      <td>Languages</td>
+      <td>Go (Golang), Python, Java, JavaScript, Shell/Bash, C++</td>
+    </tr>
+    <tr>
+      <td>Architecture</td>
+      <td>Distributed Systems, Microservices, API Design (REST/gRPC), Event-Driven Architecture, Code Generation, Domain-Driven Design</td>
+    </tr>
+    <tr>
+      <td>Cloud &amp; Infra</td>
+      <td>Kubernetes (K8s), Docker, Habitat, AWS (EC2/ECS/RDS), MinIO, Helm, CRDs</td>
+    </tr>
+    <tr>
+      <td>Messaging &amp; Data</td>
+      <td>NATS JetStream, RabbitMQ, Kafka &nbsp;|&nbsp; PostgreSQL, PGPool, OpenSearch, MySQL, Redis, MongoDB</td>
+    </tr>
+    <tr>
+      <td>Security &amp; IAM</td>
+      <td>AuthN/AuthZ, API Gateway, DexIdP (OIDC), Keycloak, mTLS</td>
+    </tr>
+    <tr>
+      <td>DevOps &amp; Obs.</td>
+      <td>Buildkite, Jenkins, Grafana, Prometheus, Chef/InSpec, GitOps</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ══════ EXPERIENCE ══════ -->
+<div class="sec">
+  <div class="sec-hdr">Professional Experience</div>
+
+  <!-- 1 -->
+  <div class="job">
+    <div class="job-top">
+      <div class="job-title">SME — Software Architect &nbsp;(Senior Principal Engineer)</div>
+      <div class="job-date">Jan 2023 – Present</div>
+    </div>
+    <div class="job-co">
+      Chef Software · Progress Software &nbsp;|&nbsp; Chef-360: DMS, Platform Services &amp; Automate
+      <span class="team">&nbsp;·&nbsp; Architecture Team (4) · Bengaluru</span>
+    </div>
+    <ul>
+      <li>Serve as <strong>SME and Architect</strong> across Chef-360 products — <strong>DMS, Platform Services, and Chef Automate</strong> — owning architectural decisions, design reviews, and engineering standards across squads.</li>
+      <li>Designed and shipped an internal <strong>Code-Generation platform</strong> that produces production-ready Go microservices from OpenAPI specs (routing, DB wiring, scaffolding); reduced new service bootstrap from days to hours.</li>
+      <li>Owned the <strong>Engineering Performance &amp; Scaling backlog</strong>: drove PostgreSQL/PGPool tuning, RabbitMQ topology optimization, and Kubernetes resource right-sizing — improving system throughput and reliability.</li>
+      <li>Partnered with Product Management on roadmap refinement, customer escalations, and evaluation of new technologies (MinIO, messaging backends).</li>
+    </ul>
+    <div class="job-tech"><b>Stack:</b> Go · PostgreSQL · PGPool · Kubernetes · Docker · Habitat · RabbitMQ · MinIO · OpenAPI · Chef</div>
+  </div>
+
+  <hr class="job-sep"/>
+
+  <!-- 2 -->
+  <div class="job">
+    <div class="job-top">
+      <div class="job-title">Engineering Manager &amp; Principal Software Engineer</div>
+      <div class="job-date">Jan 2021 – Dec 2023</div>
+    </div>
+    <div class="job-co">
+      Chef Software · Progress Software &nbsp;|&nbsp; Chef Automate
+      <span class="team">&nbsp;·&nbsp; Team of 12 · Bengaluru</span>
+    </div>
+    <ul>
+      <li><strong>Architected unified API Gateway</strong> with AuthN/Z (OIDC via DexIdP + Keycloak) across the Chef Platform — enforcing consistent identity and access control for all products.</li>
+      <li>Scaled <strong>Chef Automate HA</strong>: hardened database failover, improved query performance, and expanded horizontal scalability for enterprise deployments.</li>
+      <li>Built <strong>Data Feed integrations</strong> with Splunk, ELK Stack, ServiceNow, and Amazon S3, enabling compliance teams to route audit data to their preferred tooling.</li>
+      <li>Led PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project without breaking changes.</li>
+      <li>Managed 12 engineers — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM/QE collaboration.</li>
+    </ul>
+    <div class="job-tech"><b>Stack:</b> Go · GoFiber · PostgreSQL · OpenSearch · NATS · Docker · Habitat · Buildkite · DexIdP · Keycloak</div>
+  </div>
+
+  <hr class="job-sep"/>
+
+  <!-- 3 -->
+  <div class="job">
+    <div class="job-top">
+      <div class="job-title">SDE II &amp; Team Lead — Supply Chain &amp; Platform Engineering</div>
+      <div class="job-date">Oct 2018 – Jan 2021</div>
+    </div>
+    <div class="job-co">
+      Grofers India Pvt. Ltd. (now Blinkit)
+      <span class="team">&nbsp;·&nbsp; Team of 10 · Gurugram</span>
+    </div>
+    <ul>
+      <li>Led engineering for <strong>Retail Supply Chain, Inventory Management, and Warehouse Management</strong> — improved fulfillment accuracy, reduced operational waste, and increased item availability across dark stores.</li>
+      <li>Designed and built <strong>"Legend"</strong> — a Monitoring-as-Code CICD tool (Go) that consumed YAML and auto-generated Grafana dashboards deployed as Kubernetes CRDs alongside service manifests, standardizing observability org-wide.</li>
+    </ul>
+    <div class="job-tech"><b>Stack:</b> Go · Python · Java · React.js · PostgreSQL · MySQL · Kafka · RabbitMQ · Redis · Kubernetes · Docker</div>
+  </div>
+
+  <hr class="job-sep"/>
+
+  <!-- 4 -->
+  <div class="job">
+    <div class="job-top">
+      <div class="job-title">Technical Architect — Operations Research &amp; Optimization</div>
+      <div class="job-date">Feb 2016 – Nov 2017</div>
+    </div>
+    <div class="job-co">
+      Mathologic Technologies
+      <span class="team">&nbsp;·&nbsp; Team of 5</span>
+    </div>
+    <ul>
+      <li>Built <strong>Locomotive Link Optimization</strong> for Indian Railways — reduced idle time with configurable slack, station-wise linkage optimization, stress testing, and failure impact analysis. Estimated impact: <strong>₹100 Cr+ savings</strong>.</li>
+      <li>Delivered <strong>Crew Link Optimization</strong> for efficient nationwide duty scheduling of train crew staff.</li>
+    </ul>
+    <div class="job-tech"><b>Stack:</b> Go · Node.js · Angular 2 · D3.js · MongoDB · REST API</div>
+  </div>
+
+  <hr class="job-sep"/>
+
+  <!-- 5 -->
+  <div class="job">
+    <div class="job-top">
+      <div class="job-title">SDE &amp; System Engineer</div>
+      <div class="job-date">Feb 2014 – Oct 2018</div>
+    </div>
+    <div class="job-co">Boomerang Commerce (Jan–Oct 2018) &nbsp;·&nbsp; Infosys (Feb 2014 – Jan 2016)</div>
+    <ul>
+      <li><strong>Boomerang:</strong> Improved cross-retailer product matching algorithms and built keyword harvesting pipelines to boost content quality and search relevance. <span style="color:#666;font-size:8pt;">(Java · AWS · Snowflake)</span></li>
+      <li><strong>Infosys:</strong> Designed a multi-device WebSocket communication system bridging native C++ apps with web clients; built client libraries for Java, C++, and JavaScript. <span style="color:#666;font-size:8pt;">(Java · C++ · WebSocket)</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ══════ EDUCATION + EXTRA ══════ -->
+<div class="sec">
+  <div class="sec-hdr">Education &amp; Additional</div>
+  <div class="two-col">
+    <div>
+      <div class="edu-item">
+        <div class="edu-deg">PG Diploma in Advanced Computing</div>
+        <div class="edu-school">CDAC ACTS, Pune</div>
+        <div class="edu-meta">Aug 2013 – Feb 2014</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-deg">B.E. — Computer Science</div>
+        <div class="edu-school">RTM Nagpur University</div>
+        <div class="edu-meta">2008 – 2012 &nbsp;·&nbsp; First Division (63%)</div>
+      </div>
+    </div>
+    <div style="font-size:8.4pt; color:#2d2d2d; line-height:1.6;">
+      <div><strong>Open to:</strong> Bengaluru · Gurugram / NCR · Remote</div>
+      <div><strong>Languages:</strong> English (Professional) · Hindi (Native)</div>
+      <div><strong>GitHub:</strong> <a href="https://github.com/vivek-yadav" style="color:#2a5298;">github.com/vivek-yadav</a></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
