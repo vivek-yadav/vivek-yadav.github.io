@@ -75,7 +75,10 @@
     .theme-toggle:hover { border-color: var(--blue2); color: var(--blue2); }
     .theme-toggle .t-icon { font-size: .95rem; line-height: 1; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
     body {
       font-family: var(--font);
@@ -83,6 +86,8 @@
       color: var(--text);
       line-height: 1.65;
       font-size: 15px;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     a { color: var(--blue2); text-decoration: none; }
@@ -100,7 +105,9 @@
     .nav-logo {
       font-size: 1.1rem; font-weight: 700;
       color: var(--white); letter-spacing: .5px;
+      text-decoration: none;
     }
+    .nav-logo:hover { color: var(--white); }
     .nav-logo span { color: var(--blue2); }
     .nav-links { display: flex; gap: 1.8rem; list-style: none; }
     .nav-links a { font-size: .85rem; color: var(--subtext); font-weight: 500; transition: color .2s; }
@@ -112,6 +119,7 @@
       display: flex; flex-direction: column; justify-content: center;
       padding: 6rem 10% 4rem;
       position: relative; overflow: hidden;
+      max-width: 100%;
     }
     #hero::before {
       content: '';
@@ -163,7 +171,10 @@
     .btn-teal:hover { background: rgba(20,184,166,.1); color: var(--teal); }
 
     .hero-meta {
-      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      max-width: 420px;
     }
     .hero-stat { text-align: center; }
     .hero-stat .num {
@@ -173,7 +184,7 @@
     .hero-stat .label { font-size: .75rem; color: var(--subtext); margin-top: .2rem; }
 
     /* ── SECTION COMMON ── */
-    section { padding: 5rem 10%; }
+    section { padding: 5rem 10%; max-width: 100%; }
     .section-label {
       font-size: .75rem; font-weight: 700; letter-spacing: 2px;
       text-transform: uppercase; color: var(--teal);
@@ -327,14 +338,102 @@
       font-size: .8rem; color: var(--subtext);
     }
 
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column; justify-content: center; gap: 5px;
+      background: none; border: none; cursor: pointer;
+      padding: 4px; margin-left: .5rem;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--text); border-radius: 2px;
+      transition: all .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      #hero { padding: 6rem 6% 4rem; }
-      section { padding: 4rem 6%; }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      #hero { padding: 6rem 7% 4rem; }
+      section { padding: 4.5rem 7%; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      nav { padding: .8rem 6%; }
-      .nav-links { gap: 1rem; }
-      .nav-links li:nth-child(n+4) { display: none; }
+      .skills-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      /* Nav */
+      nav { padding: .85rem 5%; position: fixed; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed; top: 54px; left: 0; right: 0;
+        background: var(--navy2);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 5% 1.4rem;
+        gap: .2rem;
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: block; padding: .6rem 0;
+        font-size: .9rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links li:last-child a { border-bottom: none; }
+      .hamburger { display: flex; }
+      .theme-toggle .t-label { display: none; }
+
+      /* Hero */
+      #hero {
+        padding: 5.5rem 5% 3.5rem;
+        min-height: auto;
+      }
+      .hero-greeting { font-size: .85rem; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { justify-content: center; width: 100%; }
+      .hero-meta {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        gap: .8rem;
+      }
+      .hero-stat { text-align: left; }
+      .hero-stat .num { font-size: 1.5rem; }
+
+      /* Sections */
+      section { padding: 3.5rem 5%; }
+
+      /* About */
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-card { padding: 1rem 1.1rem; }
+
+      /* Skills */
+      .skills-grid { grid-template-columns: 1fr; }
+
+      /* Timeline */
+      .timeline { padding-left: 20px; }
+      .tl-top { flex-direction: column; gap: .4rem; }
+      .tl-period { align-self: flex-start; }
+      .tl-card { padding: 1rem 1.1rem; }
+
+      /* Contact */
+      .contact-links { flex-direction: column; align-items: center; }
+      .contact-chip { width: 100%; justify-content: center; }
+
+      /* Footer */
+      footer { font-size: .75rem; padding: 1.2rem 5%; line-height: 1.8; }
+    }
+
+    /* Very small screens */
+    @media (max-width: 380px) {
+      .hero-meta { gap: .6rem; }
+      .hero-stat .num { font-size: 1.2rem; }
+      .hero-stat .label { font-size: .68rem; }
     }
   </style>
 </head>
@@ -342,7 +441,7 @@
 
 <!-- ══════════════ NAV ══════════════ -->
 <nav>
-  <div class="nav-logo">Vivek<span>.</span>dev</div>
+  <a href="https://vivek-yadav.github.io" class="nav-logo">Vivek <span>Yadav</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -350,10 +449,15 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="Vivek_Yadav_Resume.pdf" target="_blank">Resume ↗</a></li>
   </ul>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-    <span class="t-icon" id="themeIcon">☀️</span>
-    <span id="themeLabel">Light</span>
-  </button>
+  <div style="display:flex;align-items:center;gap:.5rem;">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="t-icon" id="themeIcon">☀️</span>
+      <span id="themeLabel" class="t-label">Light</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <!-- ══════════════ HERO ══════════════ -->
@@ -704,6 +808,21 @@
     const next = html.classList.contains('light') ? 'dark' : 'light';
     localStorage.setItem('theme', next);
     applyTheme(next);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  // Close menu when a nav link is clicked
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
   });
 </script>
 </body>
