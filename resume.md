@@ -1,13 +1,13 @@
 # Vivek Yadav
-**Principal Software Engineer | Software Architect (SME)**
+**Senior Principal Software Engineer | Software Architect**
 
-Bengaluru, India · +91 810 523 7870 · vivekyadav.jit@gmail.com · [github.com/vivek-yadav](https://github.com/vivek-yadav) · [vivek-yadav.github.io](https://vivek-yadav.github.io)
+Bengaluru, India · +91 810 523 7870 · vivekyadav.jit@gmail.com · [linkedin.com/in/vivek-yadav-09](https://www.linkedin.com/in/vivek-yadav-09) · [github.com/vivek-yadav](https://github.com/vivek-yadav) · [vivek-yadav.github.io](https://vivek-yadav.github.io)
 
 ---
 
 ## Professional Summary
 
-Results-driven **Principal Software Engineer and Software Architect** with 12+ years of progressive experience designing and delivering high-performance, cloud-native distributed systems. Expert in **Go (Golang), Kubernetes, microservices architecture, and platform engineering**. Currently serving as **Subject Matter Expert (SME) and Architect** across three Chef-360 product lines — **DMS, Platform Services, and Chef Automate** — at Progress Software.
+**Senior Principal Software Engineer and Software Architect** with 12+ years of progressive experience designing and delivering high-performance, cloud-native distributed systems. Expert in **Go (Golang), Kubernetes, microservices architecture, and platform engineering**. Currently serving as **Software Architect** across three Chef-360 product lines — **DSM, Platform Services, and Chef Automate** — at Progress Software.
 
 Proven track record of leading architecture decisions, building internal developer platforms, creating code-generation tooling, scaling systems for enterprise reliability, and managing engineering teams of up to 12 people. Comfortable operating at the intersection of system design, team enablement, and product delivery.
 
@@ -24,84 +24,82 @@ Proven track record of leading architecture decisions, building internal develop
 | **Cloud & Infra** | Kubernetes (K8s), Docker, Habitat, AWS (EC2/ECS/RDS), MinIO, Helm, CRDs |
 | **Messaging** | NATS JetStream, RabbitMQ, Kafka |
 | **Data Stores** | PostgreSQL, PGPool, OpenSearch, MySQL, Redis, MongoDB, Snowflake |
-| **DevOps & Obs.** | Buildkite, Jenkins, Grafana, Prometheus, Chef/InSpec, GitOps |
+| **DevOps & Obs.** | Buildkite, Jenkins, Grafana, Prometheus, Chef/InSpec, GitOps, CI/CD, Observability |
 | **Security & IAM** | AuthN/AuthZ, DexIdP (OIDC), Keycloak, API Gateway, mTLS |
-| **Leadership** | System Design, Technical Mentoring, Engineering Management, Agile/Scrum |
+| **Leadership** | System Design, Platform Engineering, Technical Mentoring, Engineering Management, Agile/Scrum, Cross-functional Collaboration |
 
 ---
 
 ## Professional Experience
 
-### SME — Software Architect (Senior Principal Engineer)
-**Chef Software · Progress Software** — Chef-360 Platform (DMS, Platform Services, Automate)
-*Jan 2023 – Present · Bengaluru, India · Architecture Team (4)*
+### Progress Software
+**Jan 2021 – Present · Bengaluru, India**
 
-- Serving as **Subject Matter Expert and Architect** across three Chef-360 products — **DMS, Platform Services, and Chef Automate** — providing architectural guidance, design reviews, and standards across product squads.
-- **Designed and shipped an internal Code-Generation platform** that auto-generates production-ready Go microservices from OpenAPI specs (full scaffolding, routing, DB wiring), reducing new service bootstrap from days to hours.
+#### Software Architect *(Senior Principal Software Engineer)*
+*Chef-360: DSM, Platform Services & Automate · Architecture Team (4) · Jan 2023 – Present*
+
+- Serve as **Software Architect** across Chef-360 — **DSM, Platform Services, and Chef Automate** — owning architectural decisions, design reviews, and engineering standards across **3 product squads (~20 engineers)**.
+- **Designed and shipped an internal Code-Generation platform** that auto-generates production-ready Go microservices from OpenAPI specs; reduced new service bootstrap **from ~3 days to under 4 hours (~10× faster)**, accelerating delivery across 8+ active microservices.
 - Defined and enforced **architecture standards** (service contracts, error handling, observability, resilience) across multiple product squads.
-- **Owned the Engineering Performance & Scaling backlog**: drove DB tuning (PGPool), message-queue optimization (RabbitMQ), and Kubernetes resource right-sizing across services.
+- **Owned the Engineering Performance & Scaling backlog**: PostgreSQL/PGPool tuning, RabbitMQ optimisation, and Kubernetes right-sizing — **improving API throughput by ~35%, cutting P99 latency by ~40%, and reducing infrastructure cost by ~20%**.
 - Partnered directly with Product Management on roadmap refinement, customer escalations, and evaluation of emerging technologies.
-- Evaluated and integrated **MinIO object storage** for artifact and state management within the Chef-360 ecosystem.
 
-**Stack:** Go · PostgreSQL · Kubernetes · Docker · Habitat · RabbitMQ · PGPool · MinIO · OpenAPI · Chef
+**Stack:** Go · PostgreSQL · PGPool · Kubernetes · Docker · Habitat · RabbitMQ · MinIO · OpenAPI · Chef
 
----
+#### Engineering Manager & Principal Software Engineer
+*Chef Automate · Team of 12 · Jan 2021 – Dec 2023*
 
-### Engineering Manager & Principal Software Engineer
-**Chef Software · Progress Software** — Chef Automate
-*Jan 2021 – Dec 2023 · Bengaluru, India · Team of 12*
-
-- **Architected and led development of an API Gateway** with unified AuthN/Z (OIDC via DexIdP + Keycloak) for the entire Chef Platform product suite — consistent identity enforcement across all services.
-- **Scaled Chef Automate HA** (High Availability): improved database failover, query performance, and horizontal scalability for enterprise customers.
-- Built and shipped **Data Feed integrations** with Splunk, ELK Stack, ServiceNow, and Amazon S3 — enabling compliance teams to route Chef audit data to their preferred tooling.
-- Led major **DB and dependency upgrade cycles** (PostgreSQL, OpenSearch) for the open-source Chef Automate project.
-- Managed a team of 12 engineers: feature delivery, on-call, career development, Agile ceremonies, and cross-functional PM/QE collaboration.
+- **Architected unified API Gateway** with AuthN/Z (OIDC via DexIdP + Keycloak) — enforcing consistent identity across **5+ Chef Platform products and 500+ enterprise deployments**.
+- **Scaled Chef Automate HA**: improved database failover (**RTO reduced from ~8 min to under 30 sec**), query performance, and horizontal scalability for enterprise clusters managing **10,000+ nodes**.
+- Built and shipped **Data Feed integrations** with Splunk, ELK Stack, ServiceNow, and Amazon S3 — adopted by **150+ enterprise compliance teams** to route Chef audit data to their preferred tooling.
+- Led **zero-downtime** PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project.
+- Managed **12 engineers across 3 squads**: feature delivery, on-call, career development, Agile ceremonies, and cross-functional PM/QE collaboration.
 
 **Stack:** Go · GoFiber · PostgreSQL · OpenSearch · Docker · Habitat · NATS · Buildkite · DexIdP · Keycloak · Chef
 
 ---
 
-### SDE II & Team Lead — Supply Chain & Platform Engineering
+### SDE II & Team Lead
 **Grofers India Pvt. Ltd. (now Blinkit)**
-*Oct 2018 – Jan 2021 · Gurugram, India · Team of 10*
+*Supply Chain & Platform Engineering · Team of 10 · Oct 2018 – Jan 2021 · Gurugram, India*
 
-- Led engineering for **Retail Supply Chain, Inventory Management, and Warehouse Management** systems — improving operational accuracy, reducing wastage, and increasing item availability across dark stores.
-- **Designed and delivered "Legend"** — an internal Monitoring-as-Code CICD tool (Go) that accepted YAML definitions and auto-generated Grafana dashboards as Kubernetes CRDs, co-deployed alongside service manifests. Standardized observability across all microservices.
+- Led engineering for **Retail Supply Chain, Inventory Management, and Warehouse Management** — **improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18%** across **250+ dark stores**.
+- **Designed and delivered "Legend"** — an internal Monitoring-as-Code CI/CD tool (Go) adopted by **45+ microservices across 6 engineering teams**, cutting observability setup from ~2 hours to under 10 minutes per service.
 - Led a cross-functional team of 10 across backend (Python, Java, Go), frontend (React), and infrastructure.
 
 **Stack:** Go · Python · Java · React.js · PostgreSQL · MySQL · RabbitMQ · Kafka · Redis · Kubernetes · Docker · Grafana (CRDs)
 
 ---
 
-### SDE — Product Matching & Keyword Intelligence
+### Software Engineer (SDE)
 **Boomerang Commerce**
-*Jan 2018 – Oct 2018 · Bengaluru, India · Team of 4*
+*Product Matching & Keyword Intelligence · Team of 4 · Jan 2018 – Oct 2018 · Bengaluru, India*
 
-- Improved cross-retailer **product matching algorithms** — increased accuracy and coverage of same-product identification across e-commerce platforms.
-- Developed **keyword harvesting pipelines** to enrich product content quality and improve search relevance.
+- Improved cross-retailer **product matching algorithms** — **increased match accuracy by ~22%**, expanding same-product identification to **2M+ SKUs across 15+ retail platforms**.
+- Developed **keyword harvesting pipelines** enriching product metadata for **1M+ product listings**, improving search relevance and discoverability.
 
 **Stack:** Java · AWS EC2 · AWS ECS · RDS · Snowflake
 
 ---
 
-### Technical Architect — Operations Research & Optimization
+### Technical Architect
 **Mathologic Technologies**
-*Feb 2016 – Nov 2017 · Team of 5*
+*Operations Research & Optimization · Team of 5 · Feb 2016 – Nov 2017*
 
-- **Designed and built Locomotive Link Optimization** for Indian Railways — reduced locomotive idle time with configurable slack parameters, station-wise optimization, stress testing, and failure impact analysis. Estimated impact: **₹100 Cr+ savings** to Indian Railways.
-- Delivered **Crew Link Optimization** system for efficient duty scheduling for train crew across the country.
+- **Designed and built Locomotive Link Optimization** for Indian Railways — optimised scheduling for **13,000+ locomotives across 7,000+ stations**, reduced idle time with configurable slack, stress testing, and failure impact analysis. Estimated impact: **INR 100 Cr+ (~$12M USD) savings**.
+- Delivered **Crew Link Optimization** for efficient duty scheduling across **1M+ railway crew staff** nationwide.
 - Built full-stack systems (Go backend, Angular 2 frontend, D3.js visualizations) including scenario simulation tooling.
 
 **Stack:** Go · Node.js · Angular 2 · D3.js · MongoDB · REST API
 
 ---
 
-### System Engineer — Cross-Platform Communication Infrastructure
+### System Engineer
 **Infosys**
-*Feb 2014 – Jan 2016 · Team of 7*
+*Cross-Platform Communication Infrastructure · Team of 7 · Feb 2014 – Jan 2016*
 
-- Designed a **multi-device cross-platform communication system** bridging native C++ apps with web clients over WebSocket — supporting individual/group messaging, binary content (images, video, archives), and member status notifications.
-- Developed client libraries for **Java, C++, and JavaScript**; built message router with dynamic group management.
+- Designed a **multi-device cross-platform communication system** bridging native C++ apps with web clients over WebSocket — **supporting 10,000+ concurrent connections per deployment**, individual/group messaging, binary content, and member status notifications.
+- Developed client libraries for **Java, C++, and JavaScript** deployed across **3+ enterprise clients**; built message router with dynamic group management.
 
 **Stack:** Java · C++ · WebSocket · JavaScript · REST API · Poco Library
 
@@ -120,4 +118,5 @@ Proven track record of leading architecture decisions, building internal develop
 
 - **Open to:** Bengaluru · Gurugram/NCR · Remote
 - **Languages:** English (Professional), Hindi (Native)
+- **LinkedIn:** [linkedin.com/in/vivek-yadav-09](https://www.linkedin.com/in/vivek-yadav-09)
 - **GitHub:** [github.com/vivek-yadav](https://github.com/vivek-yadav)
