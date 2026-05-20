@@ -651,17 +651,17 @@
             <span style="font-size:.74rem; color:var(--teal); font-weight:600; white-space:nowrap;">Jan 2023 — Present</span>
           </div>
           <div style="font-size:.78rem; color:var(--blue2); font-weight:600; margin-bottom:.1rem;">Senior Principal Software Engineer</div>
-          <div class="tl-co" style="margin-bottom:.5rem; font-size:.78rem; font-weight:400; color:var(--subtext);">Chef-360: DSM, Platform Services &amp; Automate &nbsp;·&nbsp; Architecture Team (4)</div>
+          <div class="tl-co" style="margin-bottom:.5rem; font-size:.78rem; font-weight:400; color:var(--subtext);">Chef-360: DSM, Platform Services &amp; Automate &nbsp;·&nbsp; Architecture Team (4) &nbsp;·&nbsp; 8 Teams &nbsp;·&nbsp; 60+ Engineers</div>
           <ul>
-            <li>Serve as <strong>Software Architect</strong> across Chef-360 — <strong>DSM, Platform Services, and Chef Automate</strong> — owning architecture decisions, design reviews, and engineering standards across <strong>3 product squads (~20 engineers)</strong>.</li>
-            <li>Designed and shipped an internal <strong>Code-Generation platform</strong> producing production-ready Go microservices from OpenAPI specs; reduced service bootstrap <strong>from ~3 days to under 4 hours (~10× faster)</strong>, accelerating delivery across 8+ active microservices.</li>
-            <li>Owned the <strong>Engineering Performance &amp; Scaling backlog</strong>: PostgreSQL/PGPool tuning, RabbitMQ topology optimisation, Kubernetes right-sizing — <strong>+35% API throughput, −40% P99 latency, −20% infrastructure cost</strong>.</li>
-            <li>Partnered with Product on roadmap, customer escalations, and technology evaluations (MinIO, messaging backends).</li>
+            <li>Serve as <strong>Software Architect</strong> across Chef-360 — <strong>DSM, Platform Services, and Chef Automate</strong> — owning architecture decisions, design reviews, and engineering standards across <strong>8 product teams (60+ engineers)</strong>.</li>
+            <li>Pioneered <strong>end-to-end Agentic SDLC</strong> with human-in-the-loop checkpoints: PM Agent reviews Jira tickets → Architect Agent produces design docs → Backend/Frontend Dev Agents decompose and implement with Test Agent planning → Architect, Product &amp; Security Agents validate → PR for human review. All agents run on <strong>GitHub Copilot (Claude &amp; ChatGPT LLM backends)</strong>.</li>
+            <li>Built the <strong>Code-Generation platform</strong> producing production-ready Go microservices from OpenAPI specs — Dev Agents use it throughout for deterministic scaffolding; reduced service bootstrap <strong>from ~3 days to under 4 hours (~10× faster)</strong> across 8+ active microservices.</li>
+            <li>Owned the <strong>Engineering Performance &amp; Scaling backlog</strong>: PostgreSQL/PGPool tuning, RabbitMQ optimisation, Kubernetes right-sizing — <strong>+35% API throughput, −40% P99 latency, −20% infrastructure cost</strong>.</li>
           </ul>
           <div class="tl-stack">
-            <span class="st-tag">Go</span><span class="st-tag">PostgreSQL</span><span class="st-tag">PGPool</span>
-            <span class="st-tag">Kubernetes</span><span class="st-tag">RabbitMQ</span><span class="st-tag">MinIO</span>
-            <span class="st-tag">OpenAPI</span><span class="st-tag">Chef</span>
+            <span class="st-tag">Go</span><span class="st-tag">Kubernetes</span><span class="st-tag">OpenAPI</span>
+            <span class="st-tag">GitHub Copilot</span><span class="st-tag">Claude</span><span class="st-tag">ChatGPT</span>
+            <span class="st-tag">PostgreSQL</span><span class="st-tag">RabbitMQ</span><span class="st-tag">MinIO</span>
           </div>
         </div>
 
@@ -674,14 +674,14 @@
           <div class="tl-co" style="margin-bottom:.5rem; font-size:.78rem; font-weight:400; color:var(--subtext);">Chef Automate &nbsp;·&nbsp; Team of 12</div>
           <ul>
             <li><strong>Architected unified API Gateway</strong> with AuthN/Z (OIDC via DexIdP + Keycloak) — enforcing consistent identity across <strong>5+ Chef Platform products and 500+ enterprise deployments</strong>.</li>
-            <li>Scaled <strong>Chef Automate HA</strong>: improved database failover (<strong>RTO reduced from ~8 min to under 30 sec</strong>), query performance, and horizontal scalability for clusters managing <strong>10,000+ nodes</strong>.</li>
-            <li>Built <strong>Data Feed integrations</strong> with Splunk, ELK, ServiceNow, and S3 — adopted by <strong>150+ enterprise compliance teams</strong> for audit data routing.</li>
+            <li>Scaled <strong>Chef Automate HA</strong> — deployed on bare metal and VMs via Habitat across 10+ machine clusters, managing <strong>60,000+ Chef-managed nodes</strong>; implemented PostgreSQL HA meeting strict <strong>Disaster Recovery and security compliance</strong> requirements for enterprise customers.</li>
+            <li>Built <strong>Data Feed integrations</strong> with Splunk, ELK, ServiceNow, S3, and custom webhooks — adopted by <strong>150+ enterprise compliance teams</strong> for audit data routing.</li>
             <li>Led <strong>zero-downtime</strong> PostgreSQL and OpenSearch major upgrade cycles. Managed <strong>12 engineers across 3 squads</strong> — delivery, on-call, and career growth.</li>
           </ul>
           <div class="tl-stack">
             <span class="st-tag">Go</span><span class="st-tag">GoFiber</span><span class="st-tag">PostgreSQL</span>
-            <span class="st-tag">OpenSearch</span><span class="st-tag">NATS</span><span class="st-tag">DexIdP</span>
-            <span class="st-tag">Keycloak</span><span class="st-tag">Buildkite</span>
+            <span class="st-tag">OpenSearch</span><span class="st-tag">NATS</span><span class="st-tag">Habitat</span>
+            <span class="st-tag">DexIdP</span><span class="st-tag">Keycloak</span><span class="st-tag">Buildkite</span>
           </div>
         </div>
       </div>
@@ -698,13 +698,13 @@
         <div class="tl-co">Grofers India Pvt. Ltd. (now Blinkit)</div>
         <div class="tl-co" style="font-weight:400; color:var(--subtext); font-size:.8rem; margin-bottom:.8rem;">Supply Chain &amp; Platform Engineering &nbsp;·&nbsp; Team of 10 &nbsp;·&nbsp; Gurugram</div>
         <ul>
-          <li>Led <strong>Retail Supply Chain, Inventory &amp; Warehouse Management</strong> engineering — <strong>improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18%</strong> across <strong>250+ dark stores</strong>.</li>
-          <li>Designed <strong>"Legend"</strong> — Monitoring-as-Code CI/CD tool (Go) adopted by <strong>45+ microservices across 6 engineering teams</strong>, cutting observability setup from ~2 hours to under 10 minutes per service.</li>
+          <li>Led <strong>Retail Supply Chain, Inventory &amp; Warehouse Management</strong> engineering — <strong>improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18%</strong> across <strong>15+ large warehouses</strong>.</li>
+          <li>Designed <strong>"Legend"</strong> — a Monitoring-as-Code tool (Go) where monitoring is defined as YAML within the service repo, auto-generating <strong>Grafana dashboards</strong> with native <strong>PagerDuty and OpsGenie</strong> alert integrations; adopted by <strong>45+ microservices across 6 engineering teams</strong>, cutting observability setup from ~2 hours to under 10 minutes. Also established the <strong>SRE process and RCA investigation framework</strong> org-wide.</li>
         </ul>
         <div class="tl-stack">
           <span class="st-tag">Go</span><span class="st-tag">Python</span><span class="st-tag">Java</span>
           <span class="st-tag">React.js</span><span class="st-tag">Kafka</span><span class="st-tag">RabbitMQ</span>
-          <span class="st-tag">Redis</span><span class="st-tag">Kubernetes</span><span class="st-tag">Grafana CRDs</span>
+          <span class="st-tag">Grafana</span><span class="st-tag">PagerDuty</span><span class="st-tag">OpsGenie</span>
         </div>
       </div>
     </div>

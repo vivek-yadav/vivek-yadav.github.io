@@ -78,7 +78,7 @@ Designed a multi-device cross-platform communication system over WebSocket — s
 | Qualification | Institution | Year |
 |---|---|---|
 | **PG Diploma in Advanced Computing** | CDAC ACTS, Pune | 2013 – 2014 |
-| **B.E. Computer Science** (First Division · 63%) | RTM Nagpur University | 2008 – 2012 |
+| **B.E. Computer Science** | RTM Nagpur University | 2008 – 2012 |
 
 ---
 
