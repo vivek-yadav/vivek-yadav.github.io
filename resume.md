@@ -43,16 +43,6 @@ Led engineering for Retail Supply Chain, Inventory Management, and Warehouse Man
 
 ---
 
-### Mathologic Technologies — Technical Architect
-*Operations Research & Optimization · Team of 5*
-**Feb 2016 – Nov 2017**
-
-Built Locomotive Link Optimization for Indian Railways — optimised scheduling for 13,000+ locomotives across 7,000+ stations with configurable slack, stress testing, and failure impact analysis. Estimated impact: INR 100 Cr+ (~$12M USD) savings. Delivered Crew Link Optimization for efficient duty scheduling across 1M+ railway crew staff nationwide.
-
-**Stack:** Go · Node.js · Angular 2 · D3.js · MongoDB · REST API
-
----
-
 ### Boomerang Commerce — Software Engineer (SDE)
 *Product Matching & Keyword Intelligence · Bengaluru*
 **Jan 2018 – Oct 2018**
@@ -60,6 +50,16 @@ Built Locomotive Link Optimization for Indian Railways — optimised scheduling 
 Improved cross-retailer product matching algorithms — increased accuracy by ~22% across 2M+ SKUs on 15+ retail platforms. Built keyword harvesting pipelines enriching 1M+ product listings, improving search relevance and discoverability.
 
 **Stack:** Java · AWS EC2 · AWS ECS · RDS · Snowflake
+
+---
+
+### Mathologic Technologies — Technical Architect
+*Operations Research & Optimization · Team of 5*
+**Feb 2016 – Nov 2017**
+
+Built Locomotive Link Optimization for Indian Railways — optimised scheduling for 13,000+ locomotives across 7,000+ stations with configurable slack, stress testing, and failure impact analysis. Estimated impact: INR 100 Cr+ (~$12M USD) savings. Delivered Crew Link Optimization for efficient duty scheduling across 1M+ railway crew staff nationwide.
+
+**Stack:** Go · Node.js · Angular 2 · D3.js · MongoDB · REST API
 
 ---
 
