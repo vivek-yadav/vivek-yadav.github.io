@@ -7,19 +7,19 @@ vivekyadav.jit@gmail.com · +91 810 523 7870 · Bengaluru, India · [linkedin.co
 
 ## Summary
 
-Senior Principal Software Engineer and Software Architect with 12+ years delivering enterprise-grade cloud-native platforms, distributed systems, and Agentic AI-powered developer tooling. Currently serving as Software Architect across Chef-360 — DSM, Platform Services, and Chef Automate — at Progress Software, owning architectural decisions and engineering standards across 3 product squads (~20 engineers). Pioneered an end-to-end Agentic SDLC: designed a multi-agent pipeline (Requirements → AI Code Generation → Automated Testing → Security Review → Deployment) integrating Anthropic Claude, OpenAI ChatGPT, and GitHub Copilot with a deterministic Code-Generation platform to reduce AI-introduced variance and enforce production-grade quality. Deep expertise in Go, Kubernetes, microservices, API design, and platform engineering. Track record of leading teams up to 12, building internal platforms, unified API gateways, and HA distributed systems. Targeting Staff Engineer, Principal Engineer, Engineering Manager, or Solutions Architect roles.
+Senior Principal Software Engineer and Software Architect with 12+ years delivering enterprise-grade cloud-native platforms, distributed systems, and Agentic AI-powered developer tooling. Currently serving as Software Architect across Chef-360 — DSM, Platform Services, and Chef Automate — at Progress Software, owning architectural decisions and engineering standards for 8 product teams and 60+ engineers. Pioneered an end-to-end Agentic SDLC with human-in-the-loop checkpoints: a multi-agent pipeline where a Product Manager Agent reviews Jira requirements, an Architect Agent produces design docs, Backend and Frontend Dev Agents decompose work and plan with a Test Agent before implementation, and an Architect Agent validates output before Product and Security Agents sign off — all leveraging GitHub Copilot (Claude and ChatGPT LLM backends) and a deterministic Code-Generation platform to maintain consistent scaffolding. Deep expertise in Go, Kubernetes, microservices, API design, and platform engineering. Track record of leading teams up to 12, building internal platforms, unified API gateways, and HA distributed systems. Targeting Staff Engineer, Principal Engineer, Engineering Manager, or Solutions Architect roles.
 
 ---
 
 ## Experience
 
 ### Progress Software — Software Architect *(Senior Principal Software Engineer)*
-*Chef-360: DSM, Platform Services & Automate · Architecture Team (4) · Bengaluru*
+*Chef-360: DSM, Platform Services & Automate · Architecture Team (4) · 8 Teams · 60+ Engineers · Bengaluru*
 **Jan 2023 – Present**
 
-Serve as Software Architect across Chef-360 — DSM, Platform Services, and Chef Automate — owning architectural decisions, design reviews, and engineering standards across 3 product squads (~20 engineers). Pioneered Agentic SDLC: architected a multi-agent pipeline (Requirements → AI Code Generation → Automated Testing → Security Review → Deployment) integrating Anthropic Claude, OpenAI ChatGPT, and GitHub Copilot; applied Prompt Engineering and multi-step agent orchestration to automate spec validation, regression detection, and security scanning in-pipeline — reducing delivery cycle time while enforcing deterministic quality gates. Extended the internal Code-Generation platform with Agentic AI: LLM agents drive OpenAPI spec authoring and validation while deterministic Go scaffolding enforces non-negotiable quality contracts, cutting new service bootstrap from ~3 days to under 4 hours (~10× faster) across 8+ active microservices. Owned Engineering Performance & Scaling: Kubernetes right-sizing, PostgreSQL/PGPool tuning, RabbitMQ optimisation — improving API throughput by ~35%, cutting P99 latency by ~40%, and reducing infrastructure cost by ~20%.
+Serve as Software Architect across Chef-360 — DSM, Platform Services, and Chef Automate — owning architectural decisions, design reviews, and engineering standards across 8 product teams (60+ engineers). Pioneered an end-to-end Agentic SDLC with human review checkpoints: a Product Manager Agent reviews Jira tickets and updates requirements; an Architect Agent produces or updates design docs; Backend and Frontend Dev Agents review requirements and design, create sub-tasks, and engage a Test Agent to plan test coverage before implementation begins; after implementation and test runs pass, the Architect Agent validates the work, a Product Agent reviews the summary, and a Security Agent performs a final review before a PR is raised for human team review. Backend and Frontend Dev Agents leverage the internal Code-Generation platform throughout to maintain deterministic scaffolding. All agents run on GitHub Copilot using Claude and ChatGPT LLM backends. Built the Code-Generation platform that produces production-ready Go microservices from OpenAPI specs, cutting new service bootstrap from ~3 days to under 4 hours (~10× faster) across 8+ active microservices. Owned Engineering Performance & Scaling: Kubernetes right-sizing, PostgreSQL/PGPool tuning, RabbitMQ optimisation — improving API throughput by ~35%, cutting P99 latency by ~40%, and reducing infrastructure cost by ~20%.
 
-**Stack:** Go · Kubernetes · OpenAPI · Anthropic Claude · OpenAI GPT · GitHub Copilot · PostgreSQL · PGPool · RabbitMQ · MinIO · Docker · Chef
+**Stack:** Go · Kubernetes · OpenAPI · GitHub Copilot · Anthropic Claude · OpenAI GPT · PostgreSQL · PGPool · RabbitMQ · MinIO · Docker · Chef
 
 ---
 
@@ -27,9 +27,9 @@ Serve as Software Architect across Chef-360 — DSM, Platform Services, and Chef
 *Chef Automate · Team of 12 · Bengaluru*
 **Jan 2021 – Dec 2023**
 
-Architected a unified API Gateway with AuthN/Z (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments. Scaled Chef Automate HA: improved database failover (RTO reduced from ~8 min to under 30 sec) and horizontal scalability for enterprise clusters managing 10,000+ nodes on Kubernetes. Built Data Feed integrations with Splunk, ELK Stack, ServiceNow, and Amazon S3 — adopted by 150+ enterprise compliance teams to route Chef audit data to their preferred tooling. Led zero-downtime PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project. Managed 12 engineers across 3 squads — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM/QE collaboration.
+Architected a unified API Gateway with AuthN/Z (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments. Scaled Chef Automate HA — deployed on bare metal and VMs via Habitat across 10+ machine clusters, managing 60,000+ Chef-managed nodes; implemented PostgreSQL HA meeting strict Disaster Recovery and security compliance requirements mandated by enterprise customers. Built Data Feed integrations with Splunk, ELK Stack, ServiceNow, Amazon S3, and custom webhooks — adopted by 150+ enterprise compliance teams to route Chef audit data to their preferred tooling. Led zero-downtime PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project. Managed 12 engineers across 3 squads — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM/QE collaboration.
 
-**Stack:** Go · GoFiber · PostgreSQL · OpenSearch · NATS · Kubernetes · Docker · Buildkite · DexIdP · Keycloak
+**Stack:** Go · GoFiber · PostgreSQL · OpenSearch · NATS · Habitat · Docker · Buildkite · DexIdP · Keycloak
 
 ---
 
@@ -37,9 +37,9 @@ Architected a unified API Gateway with AuthN/Z (OIDC via DexIdP + Keycloak) enfo
 *Supply Chain & Platform Engineering · Team of 10 · Gurugram*
 **Oct 2018 – Jan 2021**
 
-Led engineering for Retail Supply Chain, Inventory Management, and Warehouse Management — improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18% across 250+ dark stores. Designed and built "Legend" — a Monitoring-as-Code CI/CD tool (Go) adopted by 45+ microservices across 6 engineering teams, cutting observability setup from ~2 hours to under 10 minutes per service and standardising dashboards org-wide.
+Led engineering for Retail Supply Chain, Inventory Management, and Warehouse Management — improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18% across 15+ large warehouses. Designed and built "Legend" — a Monitoring-as-Code tool (Go) where monitoring is defined as YAML within the service repo itself, auto-generating Grafana dashboards and alert integrations with native PagerDuty and OpsGenie support based on developer-defined metrics; adopted by 45+ microservices across 6 engineering teams, cutting observability setup from ~2 hours to under 10 minutes per service. Also established the Site Reliability Engineering process and RCA investigation framework org-wide.
 
-**Stack:** Go · Python · Java · React.js · PostgreSQL · MySQL · Kafka · RabbitMQ · Redis · Kubernetes · Docker
+**Stack:** Go · Python · Java · React.js · PostgreSQL · MySQL · Kafka · RabbitMQ · Redis · Grafana · PagerDuty · OpsGenie · Kubernetes · Docker
 
 ---
 
