@@ -6,16 +6,16 @@
 <style>
   @page {
     size: A4;
-    margin: 13mm 16mm 13mm 16mm;
+    margin: 16mm 18mm 16mm 18mm;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Arial', 'Helvetica Neue', sans-serif;
-    font-size: 9pt;
-    line-height: 1.42;
-    color: #1e1e1e;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: #111;
     background: #fff;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -23,408 +23,178 @@
 
   a { color: inherit; text-decoration: none; }
 
-  /* ────────────────────────────────
-     HEADER
-  ──────────────────────────────── */
-  .hdr {
-    text-align: center;
-    padding-bottom: 7pt;
-    border-bottom: 1.5px solid #1e3a5f;
-    margin-bottom: 7pt;
-  }
-  .hdr h1 {
+  /* ── NAME & CONTACT ── */
+  .name {
     font-size: 22pt;
     font-weight: 700;
     letter-spacing: 0;
     text-transform: uppercase;
-    color: #0f2035;
-    line-height: 1;
-  }
-  .hdr .role {
-    font-size: 9.5pt;
-    color: #2a5298;
-    font-weight: 600;
-    letter-spacing: 0;
-    margin-top: 2.5pt;
-    margin-bottom: 4pt;
-  }
-  .hdr .contacts {
-    font-size: 7.8pt;
-    color: #444;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0 12pt;
-  }
-  .hdr .contacts span::before {
-    content: '•';
-    margin-right: 12pt;
-    color: #2a5298;
-  }
-  .hdr .contacts span:first-child::before { content: ''; margin: 0; }
-
-  /* ────────────────────────────────
-     SECTION
-  ──────────────────────────────── */
-  .sec { margin-bottom: 8pt; }
-  .sec:last-child { margin-bottom: 0; }
-
-  .sec-hdr {
-    font-size: 7.2pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    color: #2a5298;
-    border-bottom: 0.75px solid #2a5298;
-    padding-bottom: 1.5pt;
-    margin-bottom: 5pt;
-  }
-
-  /* ────────────────────────────────
-     SUMMARY
-  ──────────────────────────────── */
-  .summary {
-    font-size: 8.8pt;
-    color: #2d2d2d;
-    line-height: 1.48;
-  }
-
-  /* ────────────────────────────────
-     SKILLS
-  ──────────────────────────────── */
-  .skills-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .skills-table tr td {
-    font-size: 8.4pt;
-    padding: 1.2pt 0;
-    vertical-align: top;
-  }
-  .skills-table td:first-child {
-    font-weight: 700;
-    color: #0f2035;
-    white-space: nowrap;
-    padding-right: 8pt;
-    width: 36mm;
-  }
-  .skills-table td:last-child { color: #2d2d2d; }
-
-  /* ────────────────────────────────
-     EXPERIENCE
-  ──────────────────────────────── */
-  .job { margin-bottom: 7pt; }
-  .job:last-child { margin-bottom: 0; }
-
-  .job-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5pt;
-  }
-  .job-title {
-    font-size: 9.2pt;
-    font-weight: 700;
-    color: #0f2035;
-  }
-  .job-date {
-    font-size: 7.8pt;
-    color: #555;
-    white-space: nowrap;
-    margin-left: 6pt;
-    flex-shrink: 0;
-  }
-  .job-co {
-    font-size: 8.2pt;
-    color: #2a5298;
-    font-weight: 600;
     margin-bottom: 3pt;
   }
-  .job-co .team {
-    font-weight: 400;
-    color: #666;
-    font-size: 7.8pt;
-  }
 
-  .job ul {
-    margin-left: 11pt;
-  }
-  .job ul li {
+  .contact {
     font-size: 8.5pt;
-    color: #2d2d2d;
+    color: #333;
+    margin-bottom: 10pt;
+  }
+
+  /* ── SECTION HEADING ── */
+  .sec-hdr {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #111;
+    padding-bottom: 1pt;
+    margin-top: 10pt;
+    margin-bottom: 4pt;
+  }
+
+  /* ── EXPERIENCE ENTRY ── */
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .exp-co-role {
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+  .exp-date {
+    font-size: 8.5pt;
+    color: #444;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .exp-sub {
+    font-size: 8.5pt;
+    font-style: italic;
+    color: #444;
     margin-bottom: 2pt;
-    line-height: 1.4;
   }
-  .job ul li strong { color: #0f2035; }
-
-  .job-tech {
-    margin-top: 2.5pt;
-    font-size: 7.5pt;
-    color: #555;
-  }
-  .job-tech b { color: #0f2035; font-weight: 700; }
-
-  .job-sep {
-    border: none;
-    border-top: 0.4px solid #dde3ea;
-    margin: 6pt 0;
+  .exp-body {
+    font-size: 9pt;
+    color: #111;
+    line-height: 1.5;
+    margin-bottom: 6pt;
   }
 
-  /* Company-grouped roles (Progress Software) */
-  .company-group { margin-bottom: 8pt; }
-  .company-group:last-child { margin-bottom: 0; }
-
-  .cg-header {
+  /* ── EDUCATION ENTRY ── */
+  .edu-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 0.75px solid #dde3ea;
-    padding-bottom: 2pt;
-    margin-bottom: 5pt;
   }
-  .cg-name { font-size: 9.5pt; font-weight: 700; color: #0f2035; }
-  .cg-tenure { font-size: 7.8pt; color: #555; white-space: nowrap; flex-shrink: 0; }
+  .edu-inst { font-size: 9.5pt; font-weight: 700; }
+  .edu-date { font-size: 8.5pt; color: #444; }
+  .edu-deg  { font-size: 9pt; font-style: italic; margin-bottom: 4pt; }
 
-  .role-block { margin-bottom: 5pt; padding-left: 7pt; border-left: 1.5px solid #e2e8f0; }
-  .role-block:last-child { margin-bottom: 0; }
-
-  .role-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5pt;
+  /* ── SKILLS ── */
+  .skills-body {
+    font-size: 9pt;
+    color: #111;
+    line-height: 1.6;
   }
-  .role-title { font-size: 9pt; font-weight: 700; color: #0f2035; }
-  .role-date { font-size: 7.8pt; color: #555; white-space: nowrap; flex-shrink: 0; margin-left: 6pt; }
-  .role-level { font-size: 7.8pt; color: #2a5298; font-weight: 600; margin-bottom: 1pt; }
-  .role-project { font-size: 7.8pt; color: #666; margin-bottom: 3pt; }
-
-  .role-sep { border: none; border-top: 0.4px solid #edf0f3; margin: 5pt 0; }
-
-  /* Project line for single-role companies */
-  .job-project { font-size: 7.8pt; color: #666; margin-bottom: 3pt; }
-
-  /* ────────────────────────────────
-     EDUCATION / TWO-COL
-  ──────────────────────────────── */
-  .two-col {
-    display: flex;
-    gap: 12pt;
-  }
-  .two-col > div { flex: 1; }
-
-  .edu-item { margin-bottom: 4pt; }
-  .edu-item:last-child { margin-bottom: 0; }
-  .edu-deg { font-size: 8.5pt; font-weight: 700; color: #0f2035; }
-  .edu-school { font-size: 8pt; color: #2a5298; }
-  .edu-meta { font-size: 7.5pt; color: #666; }
 </style>
 </head>
 <body>
 
-<!-- ══════ HEADER ══════ -->
-<div class="hdr">
-  <h1>Vivek Yadav</h1>
-  <div class="role">Senior Principal Software Engineer &nbsp;·&nbsp; Software Architect &nbsp;·&nbsp; 12+ Years</div>
-  <div class="contacts">
-    <span>Bengaluru, India</span>
-    <span>+91 810 523 7870</span>
-    <span><a href="mailto:vivekyadav.jit@gmail.com">vivekyadav.jit@gmail.com</a></span>
-    <span><a href="https://www.linkedin.com/in/vivek-yadav-09">linkedin.com/in/vivek-yadav-09</a></span>
-    <span><a href="https://github.com/vivek-yadav">github.com/vivek-yadav</a></span>
-    <span><a href="https://vivek-yadav.github.io">vivek-yadav.github.io</a></span>
-  </div>
+<!-- NAME -->
+<div class="name">Vivek Yadav</div>
+<div class="contact">
+  vivekyadav.jit@gmail.com &nbsp;•&nbsp; +91 810 523 7870 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp;
+  linkedin.com/in/vivek-yadav-09 &nbsp;•&nbsp; github.com/vivek-yadav &nbsp;•&nbsp; vivek-yadav.github.io
 </div>
 
-<!-- ══════ SUMMARY ══════ -->
-<div class="sec">
-  <div class="sec-hdr">Professional Summary</div>
-  <p class="summary">
-    Senior Principal Software Engineer and Software Architect with 12+ years delivering distributed systems, cloud-native platforms, and developer tooling at enterprise scale.
-    Currently serving as <strong>Software Architect</strong> across Chef-360 — <strong>DSM, Platform Services, and Chef Automate</strong> — at Progress Software, setting architecture standards and driving engineering excellence.
-    Deep expertise in <strong>Go, Kubernetes, microservices, API design, and platform engineering</strong>.
-    Track record of leading teams (up to 12 engineers), building code-generation platforms, unified API gateways, and HA distributed systems.
-    Targeting <strong>Staff / Principal Engineer, Engineering Manager, or Solutions Architect</strong> roles.
-  </p>
+<!-- SUMMARY -->
+<div class="sec-hdr">Summary</div>
+<div class="exp-body">
+  Senior Principal Software Engineer and Software Architect with 12+ years delivering enterprise-grade cloud-native platforms, distributed systems, and Agentic AI-powered developer tooling. Currently serving as Software Architect across Chef-360 — DSM, Platform Services, and Chef Automate — at Progress Software, owning architectural decisions and engineering standards across 3 product squads (~20 engineers). Pioneered an end-to-end Agentic SDLC: designed a multi-agent pipeline (Requirements → AI Code Generation → Automated Testing → Security Review → Deployment) integrating Anthropic Claude, OpenAI ChatGPT, and GitHub Copilot with a deterministic Code-Generation platform to reduce AI-introduced variance and enforce production-grade quality. Deep expertise in Go, Kubernetes, microservices, API design, and platform engineering. Track record of leading teams up to 12, building internal platforms, unified API gateways, and HA distributed systems. Targeting Staff Engineer, Principal Engineer, Engineering Manager, or Solutions Architect roles.
 </div>
 
-<!-- ══════ SKILLS ══════ -->
-<div class="sec">
-  <div class="sec-hdr">Technical Skills</div>
-  <table class="skills-table">
-    <tr>
-      <td>Languages</td>
-      <td>Go (Golang), Python, Java, JavaScript, Shell/Bash, C++</td>
-    </tr>
-    <tr>
-      <td>Architecture</td>
-      <td>Distributed Systems, Microservices, API Design (REST/gRPC), Event-Driven Architecture, Code Generation, Domain-Driven Design</td>
-    </tr>
-    <tr>
-      <td>Cloud &amp; Infra</td>
-      <td>Kubernetes (K8s), Docker, Habitat, AWS (EC2/ECS/RDS), MinIO, Helm, CRDs</td>
-    </tr>
-    <tr>
-      <td>Messaging &amp; Data</td>
-      <td>NATS JetStream, RabbitMQ, Kafka &nbsp;|&nbsp; PostgreSQL, PGPool, OpenSearch, MySQL, Redis, MongoDB</td>
-    </tr>
-    <tr>
-      <td>Security &amp; IAM</td>
-      <td>AuthN/AuthZ, API Gateway, DexIdP (OIDC), Keycloak, mTLS</td>
-    </tr>
-    <tr>
-      <td>DevOps &amp; Obs.</td>
-      <td>Buildkite, Jenkins, Grafana, Prometheus, Chef/InSpec, GitOps, CI/CD, Observability</td>
-    </tr>
-    <tr>
-      <td>Leadership</td>
-      <td>System Design, Platform Engineering, Technical Mentoring, Engineering Management, Agile/Scrum, Cross-functional Collaboration</td>
-    </tr>
-  </table>
+<!-- EXPERIENCE -->
+<div class="sec-hdr">Experience</div>
+
+<div class="exp-header">
+  <div class="exp-co-role">Progress Software &nbsp;—&nbsp; Software Architect (Senior Principal Software Engineer)</div>
+  <div class="exp-date">Jan 2023 – Present</div>
+</div>
+<div class="exp-sub">Chef-360: DSM, Platform Services &amp; Automate · Architecture Team (4) · Bengaluru</div>
+<div class="exp-body">
+  Serve as Software Architect across Chef-360 — DSM, Platform Services, and Chef Automate — owning architectural decisions, design reviews, and engineering standards across 3 product squads (~20 engineers). Pioneered Agentic SDLC: architected a multi-agent pipeline (Requirements → AI Code Generation → Automated Testing → Security Review → Deployment) integrating Anthropic Claude, OpenAI ChatGPT, and GitHub Copilot; applied Prompt Engineering and multi-step agent orchestration to automate spec validation, regression detection, and security scanning in-pipeline — reducing delivery cycle time while enforcing deterministic quality gates. Extended the internal Code-Generation platform with Agentic AI: LLM agents drive OpenAPI spec authoring and validation while deterministic Go scaffolding enforces non-negotiable quality contracts, cutting new service bootstrap from ~3 days to under 4 hours (~10× faster) across 8+ active microservices. Owned Engineering Performance &amp; Scaling: Kubernetes right-sizing, PostgreSQL/PGPool tuning, RabbitMQ optimisation — improving API throughput by ~35%, cutting P99 latency by ~40%, and reducing infrastructure cost by ~20%. Stack: Go · Kubernetes · OpenAPI · Anthropic Claude · OpenAI GPT · GitHub Copilot · PostgreSQL · PGPool · RabbitMQ · MinIO · Docker · Chef
 </div>
 
-<!-- ══════ EXPERIENCE ══════ -->
-<div class="sec">
-  <div class="sec-hdr">Professional Experience</div>
-
-  <!-- PROGRESS SOFTWARE — company group with 2 roles -->
-  <div class="company-group">
-    <div class="cg-header">
-      <div class="cg-name">Progress Software</div>
-      <div class="cg-tenure">Jan 2021 – Present &nbsp;·&nbsp; Bengaluru, India</div>
-    </div>
-
-    <!-- Role 1: Software Architect -->
-    <div class="role-block">
-      <div class="role-top">
-        <div class="role-title">Software Architect</div>
-        <div class="role-date">Jan 2023 – Present</div>
-      </div>
-      <div class="role-level">Senior Principal Software Engineer</div>
-      <div class="role-project">Chef-360: DSM, Platform Services &amp; Automate &nbsp;·&nbsp; Architecture Team (4)</div>
-      <ul>
-        <li>Serve as <strong>Software Architect</strong> across Chef-360 — <strong>DSM, Platform Services, and Chef Automate</strong> — owning architectural decisions, design reviews, and engineering standards across 3 product squads (~20 engineers).</li>
-        <li>Designed and shipped an internal <strong>Code-Generation platform</strong> that produces production-ready Go microservices from OpenAPI specs; reduced new service bootstrap <strong>from ~3 days to under 4 hours (~10× faster)</strong>, accelerating delivery across 8+ active microservices.</li>
-        <li>Owned the <strong>Engineering Performance &amp; Scaling backlog</strong>: PostgreSQL/PGPool tuning, RabbitMQ topology optimisation, and Kubernetes resource right-sizing — <strong>improving API throughput by ~35%, cutting P99 latency by ~40%, and reducing infrastructure cost by ~20%</strong>.</li>
-        <li>Partnered with Product Management on roadmap refinement, customer escalations, and evaluation of new technologies (MinIO, messaging backends).</li>
-      </ul>
-      <div class="job-tech"><b>Stack:</b> Go · PostgreSQL · PGPool · Kubernetes · Docker · Habitat · RabbitMQ · MinIO · OpenAPI · Chef</div>
-    </div>
-
-    <hr class="role-sep"/>
-
-    <!-- Role 2: Engineering Manager -->
-    <div class="role-block">
-      <div class="role-top">
-        <div class="role-title">Engineering Manager &amp; Principal Software Engineer</div>
-        <div class="role-date">Jan 2021 – Dec 2023</div>
-      </div>
-      <div class="role-project">Chef Automate &nbsp;·&nbsp; Team of 12</div>
-      <ul>
-        <li><strong>Architected unified API Gateway</strong> with AuthN/Z (OIDC via DexIdP + Keycloak) — enforcing consistent identity across <strong>5+ Chef Platform products and 500+ enterprise deployments</strong>.</li>
-        <li>Scaled <strong>Chef Automate HA</strong>: improved database failover (<strong>RTO reduced from ~8 min to under 30 sec</strong>), query performance, and horizontal scalability for enterprise clusters managing <strong>10,000+ nodes</strong>.</li>
-        <li>Built <strong>Data Feed integrations</strong> with Splunk, ELK Stack, ServiceNow, and Amazon S3 — adopted by <strong>150+ enterprise compliance teams</strong> to route Chef audit data to their preferred tooling.</li>
-        <li>Led zero-downtime PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project.</li>
-        <li>Managed <strong>12 engineers across 3 squads</strong> — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM/QE collaboration.</li>
-      </ul>
-      <div class="job-tech"><b>Stack:</b> Go · GoFiber · PostgreSQL · OpenSearch · NATS · Docker · Habitat · Buildkite · DexIdP · Keycloak</div>
-    </div>
-  </div>
-
-  <hr class="job-sep"/>
-
-  <!-- GROFERS / BLINKIT -->
-  <div class="job">
-    <div class="job-top">
-      <div class="job-title">SDE II &amp; Team Lead</div>
-      <div class="job-date">Oct 2018 – Jan 2021</div>
-    </div>
-    <div class="job-co">Grofers India Pvt. Ltd. (now Blinkit)</div>
-    <div class="job-project">Supply Chain &amp; Platform Engineering &nbsp;·&nbsp; Team of 10 &nbsp;·&nbsp; Gurugram</div>
-    <ul>
-      <li>Led engineering for <strong>Retail Supply Chain, Inventory Management, and Warehouse Management</strong> — <strong>improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18%</strong> across <strong>250+ dark stores</strong>.</li>
-      <li>Designed and built <strong>"Legend"</strong> — a Monitoring-as-Code CI/CD tool (Go) adopted by <strong>45+ microservices across 6 engineering teams</strong>, cutting observability setup from ~2 hours to under 10 minutes per service and standardizing dashboards org-wide.</li>
-    </ul>
-    <div class="job-tech"><b>Stack:</b> Go · Python · Java · React.js · PostgreSQL · MySQL · Kafka · RabbitMQ · Redis · Kubernetes · Docker</div>
-  </div>
-
-  <hr class="job-sep"/>
-
-  <!-- BOOMERANG COMMERCE -->
-  <div class="job">
-    <div class="job-top">
-      <div class="job-title">Software Engineer (SDE)</div>
-      <div class="job-date">Jan 2018 – Oct 2018</div>
-    </div>
-    <div class="job-co">Boomerang Commerce</div>
-    <div class="job-project">Product Matching &amp; Keyword Intelligence &nbsp;·&nbsp; Team of 4 &nbsp;·&nbsp; Bengaluru</div>
-    <ul>
-      <li>Improved cross-retailer <strong>product matching algorithms</strong> — <strong>increased match accuracy by ~22%</strong>, expanding same-product identification coverage to <strong>2M+ SKUs across 15+ retail platforms</strong>.</li>
-      <li>Built <strong>keyword harvesting pipelines</strong> enriching product metadata for <strong>1M+ product listings</strong>, improving search relevance and discoverability.</li>
-    </ul>
-    <div class="job-tech"><b>Stack:</b> Java · AWS EC2 · AWS ECS · RDS · Snowflake</div>
-  </div>
-
-  <hr class="job-sep"/>
-
-  <!-- MATHOLOGIC TECHNOLOGIES -->
-  <div class="job">
-    <div class="job-top">
-      <div class="job-title">Technical Architect</div>
-      <div class="job-date">Feb 2016 – Nov 2017</div>
-    </div>
-    <div class="job-co">Mathologic Technologies</div>
-    <div class="job-project">Operations Research &amp; Optimization &nbsp;·&nbsp; Team of 5</div>
-    <ul>
-      <li>Built <strong>Locomotive Link Optimization</strong> for Indian Railways — optimised scheduling for <strong>13,000+ locomotives across 7,000+ stations</strong>, reduced idle time with configurable slack, stress testing, and failure impact analysis. Estimated impact: <strong>INR 100 Cr+ (~$12M USD) savings</strong>.</li>
-      <li>Delivered <strong>Crew Link Optimization</strong> for efficient duty scheduling across <strong>1M+ railway crew staff</strong> nationwide.</li>
-    </ul>
-    <div class="job-tech"><b>Stack:</b> Go · Node.js · Angular 2 · D3.js · MongoDB · REST API</div>
-  </div>
-
-  <hr class="job-sep"/>
-
-  <!-- INFOSYS -->
-  <div class="job">
-    <div class="job-top">
-      <div class="job-title">System Engineer</div>
-      <div class="job-date">Feb 2014 – Jan 2016</div>
-    </div>
-    <div class="job-co">Infosys</div>
-    <div class="job-project">Cross-Platform Communication Infrastructure &nbsp;·&nbsp; Team of 7</div>
-    <ul>
-      <li>Designed a <strong>multi-device cross-platform communication system</strong> bridging native C++ apps with web clients over WebSocket — <strong>supporting 10,000+ concurrent connections per deployment</strong>, individual/group messaging, binary content, and member status notifications.</li>
-      <li>Developed client libraries for <strong>Java, C++, and JavaScript</strong> deployed across <strong>3+ enterprise clients</strong>; built message router with dynamic group creation/removal and protocol-level message typing.</li>
-    </ul>
-    <div class="job-tech"><b>Stack:</b> Java · C++ · WebSocket · JavaScript · REST API · Poco Library</div>
-  </div>
-
+<div class="exp-header">
+  <div class="exp-co-role">Progress Software &nbsp;—&nbsp; Engineering Manager &amp; Principal Software Engineer</div>
+  <div class="exp-date">Jan 2021 – Dec 2023</div>
+</div>
+<div class="exp-sub">Chef Automate · Team of 12 · Bengaluru</div>
+<div class="exp-body">
+  Architected a unified API Gateway with AuthN/Z (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments. Scaled Chef Automate HA: improved database failover (RTO reduced from ~8 min to under 30 sec) and horizontal scalability for enterprise clusters managing 10,000+ nodes on Kubernetes. Built Data Feed integrations with Splunk, ELK Stack, ServiceNow, and Amazon S3 — adopted by 150+ enterprise compliance teams to route Chef audit data to their preferred tooling. Led zero-downtime PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project. Managed 12 engineers across 3 squads — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM/QE collaboration. Stack: Go · GoFiber · PostgreSQL · OpenSearch · NATS · Kubernetes · Docker · Buildkite · DexIdP · Keycloak
 </div>
 
-<!-- ══════ EDUCATION ══════ -->
-<div class="sec">
-  <div class="sec-hdr">Education</div>
-  <div class="edu-item">
-    <div class="edu-deg">PG Diploma in Advanced Computing</div>
-    <div class="edu-school">CDAC ACTS, Pune</div>
-    <div class="edu-meta">Aug 2013 – Feb 2014</div>
-  </div>
-  <div class="edu-item">
-    <div class="edu-deg">B.E. — Computer Science</div>
-    <div class="edu-school">RTM Nagpur University</div>
-    <div class="edu-meta">2008 – 2012 &nbsp;·&nbsp; First Division (63%)</div>
-  </div>
+<div class="exp-header">
+  <div class="exp-co-role">Grofers India Pvt. Ltd. (now Blinkit) &nbsp;—&nbsp; SDE II &amp; Team Lead</div>
+  <div class="exp-date">Oct 2018 – Jan 2021</div>
+</div>
+<div class="exp-sub">Supply Chain &amp; Platform Engineering · Team of 10 · Gurugram</div>
+<div class="exp-body">
+  Led engineering for Retail Supply Chain, Inventory Management, and Warehouse Management — improved order fulfillment accuracy by ~15% and reduced inventory shrinkage by ~18% across 250+ dark stores. Designed and built "Legend" — a Monitoring-as-Code CI/CD tool (Go) adopted by 45+ microservices across 6 engineering teams, cutting observability setup from ~2 hours to under 10 minutes per service and standardising dashboards org-wide. Stack: Go · Python · Java · React.js · PostgreSQL · MySQL · Kafka · RabbitMQ · Redis · Kubernetes · Docker
 </div>
 
-<!-- ══════ ADDITIONAL ══════ -->
-<div class="sec">
-  <div class="sec-hdr">Additional Information</div>
-  <div style="font-size:8.4pt; color:#2d2d2d; line-height:1.7;">
-    <div><strong>Open to:</strong> Bengaluru · Gurugram / NCR · Remote</div>
-    <div><strong>Languages:</strong> English (Professional) · Hindi (Native)</div>
-    <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vivek-yadav-09" style="color:#2a5298;">linkedin.com/in/vivek-yadav-09</a></div>
-    <div><strong>GitHub:</strong> <a href="https://github.com/vivek-yadav" style="color:#2a5298;">github.com/vivek-yadav</a></div>
-  </div>
+<div class="exp-header">
+  <div class="exp-co-role">Mathologic Technologies &nbsp;—&nbsp; Technical Architect</div>
+  <div class="exp-date">Feb 2016 – Nov 2017</div>
+</div>
+<div class="exp-sub">Operations Research &amp; Optimization · Team of 5</div>
+<div class="exp-body">
+  Built Locomotive Link Optimization for Indian Railways — optimised scheduling for 13,000+ locomotives across 7,000+ stations with configurable slack, stress testing, and failure impact analysis. Estimated impact: INR 100 Cr+ (~$12M USD) savings. Delivered Crew Link Optimization for efficient duty scheduling across 1M+ railway crew staff nationwide. Stack: Go · Node.js · Angular 2 · D3.js · MongoDB · REST API
+</div>
+
+<div class="exp-header">
+  <div class="exp-co-role">Boomerang Commerce &nbsp;—&nbsp; Software Engineer (SDE)</div>
+  <div class="exp-date">Jan 2018 – Oct 2018</div>
+</div>
+<div class="exp-sub">Product Matching &amp; Keyword Intelligence · Bengaluru</div>
+<div class="exp-body">
+  Improved cross-retailer product matching algorithms — increased accuracy by ~22% across 2M+ SKUs on 15+ retail platforms. Built keyword harvesting pipelines enriching 1M+ product listings, improving search relevance and discoverability. Stack: Java · AWS EC2 · AWS ECS · RDS · Snowflake
+</div>
+
+<div class="exp-header">
+  <div class="exp-co-role">Infosys &nbsp;—&nbsp; System Engineer</div>
+  <div class="exp-date">Feb 2014 – Jan 2016</div>
+</div>
+<div class="exp-sub">Cross-Platform Communication Infrastructure · Team of 7</div>
+<div class="exp-body">
+  Designed a multi-device cross-platform communication system over WebSocket — supporting 10,000+ concurrent connections per deployment, individual/group messaging, binary content, and member status notifications. Developed client libraries for Java, C++, and JavaScript deployed across 3+ enterprise clients; built message router with dynamic group creation/removal and protocol-level message typing. Stack: Java · C++ · WebSocket · JavaScript · REST API · Poco Library
+</div>
+
+<!-- EDUCATION -->
+<div class="sec-hdr">Education</div>
+
+<div class="edu-header">
+  <div class="edu-inst">CDAC ACTS, Pune</div>
+  <div class="edu-date">2013 – 2014</div>
+</div>
+<div class="edu-deg">PG Diploma in Advanced Computing</div>
+
+<div class="edu-header">
+  <div class="edu-inst">RTM Nagpur University</div>
+  <div class="edu-date">2008 – 2012</div>
+</div>
+<div class="edu-deg">B.E. in Computer Science &nbsp;·&nbsp; First Division (63%)</div>
+
+<!-- SKILLS -->
+<div class="sec-hdr">Skills</div>
+<div class="skills-body">
+  Go (Golang) &nbsp;•&nbsp; Python &nbsp;•&nbsp; Java &nbsp;•&nbsp; JavaScript &nbsp;•&nbsp; Shell/Bash &nbsp;•&nbsp; C++ &nbsp;•&nbsp;
+  Agentic SDLC &nbsp;•&nbsp; LLM Integration &nbsp;•&nbsp; Prompt Engineering &nbsp;•&nbsp; Anthropic Claude &nbsp;•&nbsp; OpenAI GPT &nbsp;•&nbsp; GitHub Copilot &nbsp;•&nbsp; Spec-Driven Development &nbsp;•&nbsp;
+  Distributed Systems &nbsp;•&nbsp; Microservices &nbsp;•&nbsp; API Design (REST/gRPC) &nbsp;•&nbsp; Event-Driven Architecture &nbsp;•&nbsp; Code Generation &nbsp;•&nbsp; Domain-Driven Design &nbsp;•&nbsp;
+  Kubernetes (K8s) &nbsp;•&nbsp; Docker &nbsp;•&nbsp; AWS (EC2/ECS/RDS) &nbsp;•&nbsp; MinIO &nbsp;•&nbsp; Helm &nbsp;•&nbsp; CRDs &nbsp;•&nbsp;
+  NATS JetStream &nbsp;•&nbsp; RabbitMQ &nbsp;•&nbsp; Kafka &nbsp;•&nbsp; PostgreSQL &nbsp;•&nbsp; PGPool &nbsp;•&nbsp; OpenSearch &nbsp;•&nbsp; MySQL &nbsp;•&nbsp; Redis &nbsp;•&nbsp; MongoDB &nbsp;•&nbsp;
+  AuthN/AuthZ &nbsp;•&nbsp; DexIdP (OIDC) &nbsp;•&nbsp; Keycloak &nbsp;•&nbsp; mTLS &nbsp;•&nbsp; API Gateway &nbsp;•&nbsp;
+  Buildkite &nbsp;•&nbsp; Jenkins &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; Grafana &nbsp;•&nbsp; Prometheus &nbsp;•&nbsp; GitOps &nbsp;•&nbsp; Observability &nbsp;•&nbsp;
+  System Design &nbsp;•&nbsp; Platform Engineering &nbsp;•&nbsp; Technical Mentoring &nbsp;•&nbsp; Engineering Management &nbsp;•&nbsp; Agile/Scrum
 </div>
 
 </body>
