@@ -497,7 +497,8 @@
     <a href="#contact" class="btn btn-primary">&#9993;&nbsp; Reach Out for Work</a>
     <a id="hero-resume-btn" href="Vivek_Yadav_Resume.pdf" target="_blank" class="btn btn-outline"
        data-ic-href="Vivek_Yadav_Resume.pdf" data-em-href="Vivek_Yadav_Resume_EM.pdf">&#8595;&nbsp; <span id="hero-resume-label">Download Resume (PDF)</span></a>
-    <a href="resume.md" target="_blank" class="btn btn-teal">&#128196;&nbsp; Resume (Markdown)</a>
+    <a id="hero-md-btn" href="resume.md" target="_blank" class="btn btn-teal"
+       data-ic-href="resume.md" data-em-href="resume-em.md">&#128196;&nbsp; <span id="hero-md-label">Resume (Markdown)</span></a>
   </div>
   <div class="hero-meta">
     <div class="hero-stat"><div class="num">12+</div><div class="label">Years Experience</div></div>
@@ -831,8 +832,9 @@
          data-ic-href="Vivek_Yadav_Resume.pdf" data-em-href="Vivek_Yadav_Resume_EM.pdf">
         <span class="icon">&#128196;</span> <span id="contact-resume-label">Resume (PDF)</span>
       </a>
-      <a href="resume.md" target="_blank" class="contact-chip">
-        <span class="icon">&#128221;</span> Resume (Markdown)
+      <a id="contact-md-chip" href="resume.md" target="_blank" class="contact-chip"
+         data-ic-href="resume.md" data-em-href="resume-em.md">
+        <span class="icon">&#128221;</span> <span id="contact-md-label">Resume (Markdown)</span>
       </a>
     </div>
     <a href="mailto:vivekyadav.jit@gmail.com" class="btn btn-primary" style="font-size:.95rem; padding:.85rem 2rem;">
@@ -922,12 +924,16 @@
   const ROLE_HREFS = [
     { id: 'nav-resume-link',     icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' },
     { id: 'hero-resume-btn',     icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' },
-    { id: 'contact-resume-chip', icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' }
+    { id: 'contact-resume-chip', icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' },
+    { id: 'hero-md-btn',         icHref: 'resume.md',              emHref: 'resume-em.md' },
+    { id: 'contact-md-chip',     icHref: 'resume.md',              emHref: 'resume-em.md' }
   ];
 
   const ROLE_LABELS = [
     { id: 'hero-resume-label',    ic: 'Download Resume (PDF)',    em: 'Download EM Resume (PDF)' },
-    { id: 'contact-resume-label', ic: 'Resume (PDF)',             em: 'EM Resume (PDF)' }
+    { id: 'contact-resume-label', ic: 'Resume (PDF)',             em: 'EM Resume (PDF)' },
+    { id: 'hero-md-label',        ic: 'Resume (Markdown)',        em: 'EM Resume (Markdown)' },
+    { id: 'contact-md-label',     ic: 'Resume (Markdown)',        em: 'EM Resume (Markdown)' }
   ];
 
   function applyRoleMode(mode, updateHistory) {
