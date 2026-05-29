@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivek Yadav - Resume (Engineering Leadership)</title>
+<style>
+  /* ---------- ATS-friendly, print-clean resume ----------
+     Single column, real text, standard fonts, no tables/graphics.
+     Print or "Save as PDF" (Ctrl/Cmd + P) to generate the PDF.
+     Variant: Senior Engineering Manager / Director of Engineering. */
+
+  :root {
+    --ink: #1a1a1a;
+    --muted: #444;
+    --accent: #1f3a5f;
+    --rule: #b9c2cc;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f3f4f6;
+  }
+
+  body {
+    font-family: "Calibri", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 10.6pt;
+    line-height: 1.34;
+  }
+
+  .page {
+    width: 8.27in;
+    min-height: 11.69in;
+    margin: 24px auto;
+    background: #fff;
+    padding: 0.55in 0.62in;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+  }
+
+  header { margin-bottom: 6px; }
+
+  h1 {
+    font-size: 22pt;
+    letter-spacing: 0.5px;
+    margin: 0 0 2px 0;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+
+  .role-line {
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 5px 0;
+  }
+
+  .contact {
+    font-size: 9.6pt;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact .sep { color: var(--rule); padding: 0 5px; }
+
+  section { margin-top: 12px; }
+
+  h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin: 0 0 6px 0;
+    padding-bottom: 3px;
+    border-bottom: 1.4px solid var(--accent);
+  }
+
+  .summary { margin: 0; text-align: justify; }
+
+  .job { margin-bottom: 11px; }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .job-title { font-size: 10.8pt; font-weight: 700; margin: 0; }
+  .job-company { font-weight: 600; }
+  .job-dates {
+    font-size: 9.6pt;
+    color: var(--muted);
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .job-meta {
+    font-size: 9.3pt;
+    color: var(--muted);
+    font-style: italic;
+    margin: 1px 0 3px 0;
+  }
+
+  ul { margin: 3px 0 0 0; padding-left: 17px; }
+  li { margin-bottom: 2.5px; }
+
+  .skills p { margin: 0 0 3.5px 0; }
+  .skills .cat { font-weight: 700; }
+
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .edu-row .deg { font-weight: 600; }
+  .edu-row .school { color: var(--muted); }
+  .edu-row .yr { font-size: 9.6pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+
+  .toolbar {
+    width: 8.27in;
+    margin: 16px auto -8px auto;
+    text-align: right;
+  }
+  .toolbar button {
+    font: inherit;
+    font-size: 10pt;
+    padding: 8px 16px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .toolbar .hint { font-size: 9pt; color: #6b7280; margin-right: 12px; }
+
+  @page {
+    size: A4;
+    margin: 16mm 15mm;
+  }
+
+  @media print {
+    html, body { background: #fff; }
+    .toolbar { display: none !important; }
+    .page {
+      width: auto;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    a { color: var(--muted) !important; }
+
+    .job { page-break-inside: auto; break-inside: auto; }
+    h2 { break-after: avoid; page-break-after: avoid; }
+    .job-head, .job-meta { break-after: avoid; page-break-after: avoid; }
+    li, p { orphans: 2; widows: 2; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="hint">Tip: Print &rarr; "Save as PDF" (A4, Margins: <b>Default</b>). Turn off "Headers and footers".</span>
+  <button onclick="window.print()">Download as PDF</button>
+</div>
+
+<div class="page">
+
+  <header>
+    <h1>Vivek Yadav</h1>
+    <p class="role-line">Senior Engineering Manager / Senior Principal Engineer &nbsp;|&nbsp; Platform &amp; Distributed Systems</p>
+    <p class="contact">
+      Bengaluru, India
+      <span class="sep">|</span> +91 810 523 7870
+      <span class="sep">|</span> <a href="mailto:vivekyadav.jit@gmail.com">vivekyadav.jit@gmail.com</a>
+      <br>
+      <a href="https://linkedin.com/in/vivek-yadav-09">linkedin.com/in/vivek-yadav-09</a>
+      <span class="sep">|</span> <a href="https://github.com/vivek-yadav">github.com/vivek-yadav</a>
+      <span class="sep">|</span> <a href="https://vivek-yadav.github.io">vivek-yadav.github.io</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Engineering leader with 12+ years building and scaling cloud-native platforms and the teams behind them.
+      Currently set architecture and engineering standards across 8 product teams (60+ engineers) at Progress
+      Software, and previously, as Senior Engineering Manager, led 12 engineers across 3 squads. Track record of growing high-performing
+      teams, accelerating delivery through internal developer platforms, and driving measurable outcomes in
+      throughput, latency, reliability, and infrastructure cost. Combine hands-on depth in Go, Kubernetes, and
+      distributed systems with people leadership, hiring, mentoring, and cross-functional execution across
+      Product, QE, and Security. Targeting Senior Engineering Manager or Director of Engineering roles.
+    </p>
+  </section>
+
+  <section>
+    <h2>Leadership &amp; Technical Skills</h2>
+    <div class="skills">
+      <p><span class="cat">Leadership &amp; Management:</span> Engineering Management, People Leadership (teams up to 12), Hiring &amp; Mentoring, Performance &amp; Career Development, Org-wide Engineering Standards, Roadmap &amp; Delivery Planning, Stakeholder Management, Cross-functional Collaboration (Product / QE / Security), Agile / Scrum</p>
+      <p><span class="cat">Engineering Strategy:</span> Architecture &amp; Design Reviews, Platform Engineering, Distributed Systems, API Design (REST / gRPC), Domain-Driven Design, High Availability / Disaster Recovery, Performance &amp; Cost Optimization</p>
+      <p><span class="cat">AI &amp; Developer Productivity:</span> Agentic SDLC, Multi-Agent Orchestration, LLM Integration, Code Generation, Internal Developer Platforms, GitHub Copilot, Anthropic Claude, OpenAI GPT</p>
+      <p><span class="cat">Technical Foundation:</span> Go (Golang), Python, Java, JavaScript, Kubernetes, Docker, Helm, AWS, PostgreSQL, OpenSearch, NATS JetStream, Kafka, RabbitMQ, Redis, CI / CD, Prometheus, Grafana, OIDC / Keycloak, mTLS</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <p class="job-title"><span class="job-company">Progress Software (Chef)</span> &mdash; Senior Engineering Manager &rarr; Senior Principal Software Engineer</p>
+        <span class="job-dates">Jan 2021 &ndash; Present</span>
+      </div>
+      <p class="job-meta">Senior Engineering Manager (2021&ndash;2023, 12 direct reports) &rarr; Senior Principal Software Engineer / IC (2024&ndash;Present) &middot; Chef-360 &amp; Chef Automate &middot; 8 Teams &middot; 60+ Engineers &middot; Bengaluru</p>
+      <ul>
+        <li>As Senior Engineering Manager (2021&ndash;2023), directly managed 12 engineers across 3 squads, owning feature delivery, on-call rotations, hiring, performance reviews, career growth, and Agile ceremonies.</li>
+        <li>Set architecture, design-review, and engineering standards adopted across 8 product teams (60+ engineers) spanning Chef-360 (DSM, Platform Services) and Chef Automate.</li>
+        <li>Led an org-wide developer-productivity initiative: built an internal Code-Generation platform producing production-ready Go microservices from OpenAPI specs, cutting new-service bootstrap from ~3 days to under 4 hours (~10x) across 8+ services.</li>
+        <li>Introduced an end-to-end Agentic SDLC with human-in-the-loop checkpoints (a multi-agent pipeline on GitHub Copilot with Claude and GPT) to standardize requirements, design, implementation, and security review across teams.</li>
+        <li>Owned the engineering performance and scaling roadmap, improving API throughput ~35%, cutting P99 latency ~40%, and reducing infrastructure cost ~20%.</li>
+        <li>Partnered with Product, QE, and Security leadership on requirements, release readiness, and compliance across 500+ enterprise deployments.</li>
+        <li>Delivered a unified API Gateway (OIDC via DexIdP + Keycloak) and scaled Chef Automate HA to manage 60,000+ nodes, including zero-downtime PostgreSQL and OpenSearch major upgrades.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <p class="job-title"><span class="job-company">Grofers India Pvt. Ltd. (now Blinkit)</span> &mdash; SDE II &amp; Team Lead</p>
+        <span class="job-dates">Oct 2018 &ndash; Jan 2021</span>
+      </div>
+      <p class="job-meta">Supply Chain &amp; Platform Engineering &middot; Team of 10 &middot; Gurugram</p>
+      <ul>
+        <li>Led a 10-engineer team across Retail Supply Chain, Inventory, and Warehouse Management, delivering ~15% higher order-fulfillment accuracy and ~18% lower inventory shrinkage across 15+ warehouses.</li>
+        <li>Established the org-wide Site Reliability Engineering process and RCA investigation framework, improving reliability and incident response across teams.</li>
+        <li>Drove observability standardization with "Legend," a Monitoring-as-Code tool in Go adopted by 45+ microservices across 6 teams, cutting setup from ~2 hours to under 10 minutes per service.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <p class="job-title"><span class="job-company">Mathologic Technologies</span> &mdash; Technical Architect</p>
+        <span class="job-dates">Feb 2016 &ndash; Nov 2017</span>
+      </div>
+      <p class="job-meta">Operations Research &amp; Optimization &middot; Team of 5</p>
+      <ul>
+        <li>Led a 5-person team delivering Locomotive and Crew Link Optimization for Indian Railways (13,000+ locomotives, 7,000+ stations, 1M+ crew staff), with estimated INR 100 Cr+ (~$12M) in projected savings.</li>
+        <li>Owned solution architecture, stress testing, and failure-impact analysis end to end, partnering directly with client stakeholders.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <p class="job-title"><span class="job-company">Boomerang Commerce</span> &mdash; Software Engineer</p>
+        <span class="job-dates">Jan 2018 &ndash; Oct 2018</span>
+      </div>
+      <p class="job-meta">Product Matching &amp; Keyword Intelligence &middot; Bengaluru</p>
+      <ul>
+        <li>Improved cross-retailer product-matching accuracy ~22% across 2M+ SKUs on 15+ platforms, and built keyword-harvesting pipelines enriching 1M+ listings.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <p class="job-title"><span class="job-company">Infosys</span> &mdash; System Engineer</p>
+        <span class="job-dates">Feb 2014 &ndash; Jan 2016</span>
+      </div>
+      <p class="job-meta">Cross-Platform Communication Infrastructure &middot; Team of 7</p>
+      <ul>
+        <li>Designed a WebSocket-based multi-device communication system supporting 10,000+ concurrent connections, and built Java, C++, and JavaScript client libraries deployed across 3+ enterprise clients.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu-row">
+      <span><span class="deg">PG Diploma in Advanced Computing</span> &mdash; <span class="school">CDAC ACTS, Pune</span></span>
+      <span class="yr">2013 &ndash; 2014</span>
+    </div>
+    <div class="edu-row">
+      <span><span class="deg">B.E. in Computer Science</span> &mdash; <span class="school">RTM Nagpur University</span></span>
+      <span class="yr">2008 &ndash; 2012</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

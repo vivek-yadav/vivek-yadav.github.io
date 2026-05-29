@@ -75,6 +75,24 @@
     .theme-toggle:hover { border-color: var(--blue2); color: var(--blue2); }
     .theme-toggle .t-icon { font-size: .95rem; line-height: 1; }
 
+    /* ── Role toggle pill ── */
+    .role-toggle {
+      display: flex; align-items: center;
+      background: rgba(255,255,255,.06);
+      border: 1.5px solid var(--border);
+      border-radius: 20px; padding: 2px; gap: 0;
+    }
+    .role-pill-btn {
+      background: none; border: none; cursor: pointer;
+      padding: .25rem .7rem; border-radius: 16px;
+      font-size: .75rem; font-weight: 600; font-family: var(--font);
+      color: var(--subtext); transition: all .2s; white-space: nowrap;
+    }
+    .role-pill-btn.active { background: var(--blue); color: #fff; }
+    .role-pill-btn:not(.active):hover { color: var(--blue2); }
+    html.light .role-toggle { background: rgba(0,0,0,.05); }
+    html.light .role-pill-btn.active { background: var(--blue); color: #fff; }
+
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
@@ -388,6 +406,7 @@
       .nav-links li:last-child a { border-bottom: none; }
       .hamburger { display: flex; }
       .theme-toggle .t-label { display: none; }
+      .role-pill-btn { padding: .22rem .5rem; font-size: .7rem; }
 
       /* Hero */
       #hero {
@@ -447,9 +466,13 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="Vivek_Yadav_Resume.pdf" target="_blank">Resume ↗</a></li>
+    <li><a id="nav-resume-link" href="Vivek_Yadav_Resume.pdf" target="_blank" data-ic-href="Vivek_Yadav_Resume.pdf" data-em-href="Vivek_Yadav_Resume_EM.pdf">Resume ↗</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:.5rem;">
+    <div class="role-toggle" title="Switch career track">
+      <button class="role-pill-btn active" data-mode="ic">Engineer</button>
+      <button class="role-pill-btn" data-mode="em">Manager</button>
+    </div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="t-icon" id="themeIcon">☀️</span>
       <span id="themeLabel" class="t-label">Light</span>
@@ -464,15 +487,16 @@
 <section id="hero">
   <p class="hero-greeting">👋 &nbsp;Hi, my name is</p>
   <h1>Vivek Yadav.</h1>
-  <h2>I build <span>distributed systems</span> &amp; platforms at scale.</h2>
-  <p class="hero-desc">
+  <h2 id="hero-h2">I build <span>distributed systems</span> &amp; platforms at scale.</h2>
+  <p class="hero-desc" id="hero-desc">
     Senior Principal Software Engineer with 12+ years of experience designing cloud-native platforms,
     developer tooling, and high-performance backend systems. Currently leading architecture, design
     reviews, and engineering standards across Chef-360 (DSM, Platform Services &amp; Automate) at Progress Software.
   </p>
   <div class="hero-ctas">
     <a href="#contact" class="btn btn-primary">&#9993;&nbsp; Reach Out for Work</a>
-    <a href="Vivek_Yadav_Resume.pdf" target="_blank" class="btn btn-outline">&#8595;&nbsp; Download Resume (PDF)</a>
+    <a id="hero-resume-btn" href="Vivek_Yadav_Resume.pdf" target="_blank" class="btn btn-outline"
+       data-ic-href="Vivek_Yadav_Resume.pdf" data-em-href="Vivek_Yadav_Resume_EM.pdf">&#8595;&nbsp; <span id="hero-resume-label">Download Resume (PDF)</span></a>
     <a href="resume.md" target="_blank" class="btn btn-teal">&#128196;&nbsp; Resume (Markdown)</a>
   </div>
   <div class="hero-meta">
@@ -490,7 +514,7 @@
   <div class="divider"></div>
   <div class="about-grid">
     <div class="about-text">
-      <p>
+      <p id="about-p1">
         I'm a <strong>Senior Principal Software Engineer</strong> based in Bengaluru,
         India, with a passion for building systems that are fast, scalable, and a joy for
         other engineers to work on.
@@ -500,12 +524,12 @@
         designing services that hold up under load, creating internal developer platforms that
         multiply team velocity, and making hard architectural trade-offs with long-term clarity.
       </p>
-      <p>
+      <p id="about-p3">
         I currently lead architecture and engineering standards across Chef-360 products at
         Progress Software, driving performance improvements and partnering directly with Product
         on roadmap and customer problems.
       </p>
-      <p>
+      <p id="about-p4">
         I'm open to <strong>Staff / Principal Engineer, Engineering Manager, and Software
         Architect</strong> opportunities where I can make a meaningful impact.
       </p>
@@ -540,10 +564,10 @@
         </div>
       </div>
       <div class="about-card">
-        <div class="about-card-icon ic-blue">🔐</div>
+        <div class="about-card-icon ic-blue">🤖</div>
         <div>
-          <h4>Security &amp; Identity</h4>
-          <p>Building AuthN/Z layers, OIDC-based API gateways (DexIdP, Keycloak), and enterprise IAM integrations across platform products.</p>
+          <h4>AI-First Engineering</h4>
+          <p>Pioneered an end-to-end Agentic SDLC using GitHub Copilot, Claude, and GPT — from requirements review through architecture, implementation, security sign-off, and PR. Built the internal Code-Generation platform used by 8+ teams.</p>
         </div>
       </div>
     </div>
@@ -571,6 +595,15 @@
         <span class="s-tag">REST / gRPC</span><span class="s-tag">Event-Driven</span>
         <span class="s-tag">Code Generation</span><span class="s-tag">DDD</span>
         <span class="s-tag">OpenAPI</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h4>AI Engineering</h4>
+      <div class="skill-tags">
+        <span class="s-tag">Agentic SDLC</span><span class="s-tag">Multi-Agent Orchestration</span>
+        <span class="s-tag">LLM Integration</span><span class="s-tag">Prompt Engineering</span>
+        <span class="s-tag">Spec-Driven Dev</span><span class="s-tag">GitHub Copilot</span>
+        <span class="s-tag">Anthropic Claude</span><span class="s-tag">OpenAI GPT</span>
       </div>
     </div>
     <div class="skill-card">
@@ -647,7 +680,7 @@
         <div style="border-left:2px solid rgba(59,130,246,.25); padding-left:.8rem; margin-bottom:.7rem;">
           <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.4rem; margin-bottom:.15rem;">
             <span style="font-size:.88rem; font-weight:700; color:var(--white);">Senior Principal Software Engineer</span>
-            <span style="font-size:.74rem; color:var(--teal); font-weight:600; white-space:nowrap;">Jan 2023 — Present</span>
+            <span style="font-size:.74rem; color:var(--teal); font-weight:600; white-space:nowrap;">Jan 2024 — Present</span>
           </div>
           <div class="tl-co" style="margin-bottom:.5rem; font-size:.78rem; font-weight:400; color:var(--subtext);">Chef-360: DSM, Platform Services &amp; Automate &nbsp;·&nbsp; Architecture Team (4) &nbsp;·&nbsp; 8 Teams &nbsp;·&nbsp; 60+ Engineers</div>
           <ul>
@@ -666,15 +699,15 @@
         <!-- Sub-role 2 -->
         <div style="border-left:2px solid rgba(59,130,246,.15); padding-left:.8rem;">
           <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.4rem; margin-bottom:.15rem;">
-            <span style="font-size:.88rem; font-weight:700; color:var(--white);">Engineering Manager &amp; Principal Software Engineer</span>
+            <span style="font-size:.88rem; font-weight:700; color:var(--white);">Senior Engineering Manager</span>
             <span style="font-size:.74rem; color:var(--subtext); font-weight:600; white-space:nowrap;">Jan 2021 — Dec 2023</span>
           </div>
           <div class="tl-co" style="margin-bottom:.5rem; font-size:.78rem; font-weight:400; color:var(--subtext);">Chef Automate &nbsp;·&nbsp; Team of 12</div>
           <ul>
+            <li>Directly managed <strong>12 engineers across 3 squads</strong> — owning feature delivery, on-call rotations, hiring, performance reviews, career growth, and Agile ceremonies.</li>
             <li><strong>Architected unified API Gateway</strong> with AuthN/Z (OIDC via DexIdP + Keycloak) — enforcing consistent identity across <strong>5+ Chef Platform products and 500+ enterprise deployments</strong>.</li>
             <li>Scaled <strong>Chef Automate HA</strong> — deployed on bare metal and VMs via Habitat across 10+ machine clusters, managing <strong>60,000+ Chef-managed nodes</strong>; implemented PostgreSQL HA meeting strict <strong>Disaster Recovery and security compliance</strong> requirements for enterprise customers.</li>
-            <li>Built <strong>Data Feed integrations</strong> with Splunk, ELK, ServiceNow, S3, and custom webhooks — adopted by <strong>150+ enterprise compliance teams</strong> for audit data routing.</li>
-            <li>Led <strong>zero-downtime</strong> PostgreSQL and OpenSearch major upgrade cycles. Managed <strong>12 engineers across 3 squads</strong> — delivery, on-call, and career growth.</li>
+            <li>Built <strong>Data Feed integrations</strong> with Splunk, ELK, ServiceNow, S3, and custom webhooks — adopted by <strong>150+ enterprise compliance teams</strong>. Led <strong>zero-downtime</strong> PostgreSQL and OpenSearch major upgrade cycles.</li>
           </ul>
           <div class="tl-stack">
             <span class="st-tag">Go</span><span class="st-tag">GoFiber</span><span class="st-tag">PostgreSQL</span>
@@ -779,7 +812,7 @@
   <h2 class="section-title">Open to Opportunities</h2>
   <div class="divider" style="margin:auto; margin-bottom:1.5rem;"></div>
   <div class="contact-box">
-    <p>
+    <p id="contact-blurb">
       I'm currently open to <strong style="color:var(--text)">Staff / Principal Engineer,
       Engineering Manager, and Software Architect</strong> roles. If you have an interesting
       problem to solve or just want to talk engineering, my inbox is always open.
@@ -794,8 +827,9 @@
       <a href="https://github.com/vivek-yadav" target="_blank" class="contact-chip">
         <span class="icon">&#128736;</span> github.com/vivek-yadav
       </a>
-      <a href="Vivek_Yadav_Resume.pdf" target="_blank" class="contact-chip">
-        <span class="icon">&#128196;</span> Resume (PDF)
+      <a id="contact-resume-chip" href="Vivek_Yadav_Resume.pdf" target="_blank" class="contact-chip"
+         data-ic-href="Vivek_Yadav_Resume.pdf" data-em-href="Vivek_Yadav_Resume_EM.pdf">
+        <span class="icon">&#128196;</span> <span id="contact-resume-label">Resume (PDF)</span>
       </a>
       <a href="resume.md" target="_blank" class="contact-chip">
         <span class="icon">&#128221;</span> Resume (Markdown)
@@ -815,10 +849,11 @@
 </footer>
 
 <script>
-  const html    = document.documentElement;
-  const btn     = document.getElementById('themeToggle');
-  const icon    = document.getElementById('themeIcon');
-  const label   = document.getElementById('themeLabel');
+  /* ── Theme toggle ── */
+  const html  = document.documentElement;
+  const btn   = document.getElementById('themeToggle');
+  const icon  = document.getElementById('themeIcon');
+  const label = document.getElementById('themeLabel');
 
   function applyTheme(theme) {
     if (theme === 'light') {
@@ -832,7 +867,6 @@
     }
   }
 
-  // Load saved preference, fallback to OS preference
   const saved = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   applyTheme(saved || (prefersDark ? 'dark' : 'light'));
@@ -843,19 +877,83 @@
     applyTheme(next);
   });
 
-  // Hamburger menu
+  /* ── Hamburger menu ── */
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.querySelector('.nav-links');
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navLinks.classList.toggle('open');
   });
-  // Close menu when a nav link is clicked
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       hamburger.classList.remove('open');
       navLinks.classList.remove('open');
     });
+  });
+
+  /* ── Role toggle (IC Engineer / EM Manager) ── */
+  const ROLE_CONTENT = {
+    'hero-h2': {
+      ic: 'I build <span>distributed systems</span> &amp; platforms at scale.',
+      em: 'I build <span>high-performing engineering teams</span> &amp; platforms.'
+    },
+    'hero-desc': {
+      ic: 'Senior Principal Software Engineer with 12+ years of experience designing cloud-native platforms, developer tooling, and high-performance backend systems. Currently leading architecture, design reviews, and engineering standards across Chef-360 (DSM, Platform Services &amp; Automate) at Progress Software.',
+      em: 'Engineering leader with 12+ years building cloud-native platforms and the teams behind them. Managed 12 engineers across 3 squads at Progress Software; now set architecture and engineering standards for 8 product teams (60+ engineers). Track record of growing high-performing teams, accelerating delivery through internal developer platforms, and driving measurable outcomes in throughput, latency, reliability, and cost.'
+    },
+    'about-p1': {
+      ic: 'I\'m a <strong>Senior Principal Software Engineer</strong> based in Bengaluru, India, with a passion for building systems that are fast, scalable, and a joy for other engineers to work on.',
+      em: 'I\'m an <strong>Engineering Manager &amp; Senior Principal Software Engineer</strong> based in Bengaluru, India, with a passion for building high-performing teams and the platforms that multiply their impact.'
+    },
+    'about-p3': {
+      ic: 'I currently lead architecture and engineering standards across Chef-360 products at Progress Software, driving performance improvements and partnering directly with Product on roadmap and customer problems.',
+      em: 'At Progress Software, I managed 12 engineers across 3 squads before transitioning to IC leadership — now setting architecture and engineering standards for 8 product teams (60+ engineers), partnering with Product and Security leadership on roadmap, release readiness, and compliance.'
+    },
+    'about-p4': {
+      ic: 'I\'m open to <strong>Staff / Principal Engineer, Engineering Manager, and Software Architect</strong> opportunities where I can make a meaningful impact.',
+      em: 'I\'m open to <strong>Senior Engineering Manager, Director of Engineering, or VP of Engineering</strong> opportunities where I can build and grow high-performing teams.'
+    },
+    'contact-blurb': {
+      ic: 'I\'m currently open to <strong style="color:var(--text)">Staff / Principal Engineer, Engineering Manager, and Software Architect</strong> roles. If you have an interesting problem to solve or just want to talk engineering, my inbox is always open.',
+      em: 'I\'m currently open to <strong style="color:var(--text)">Senior Engineering Manager, Director of Engineering, or VP of Engineering</strong> roles. If you\'re looking for a leader who can build teams, ship platforms, and drive engineering excellence — let\'s talk.'
+    }
+  };
+
+  const ROLE_HREFS = [
+    { id: 'nav-resume-link',     icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' },
+    { id: 'hero-resume-btn',     icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' },
+    { id: 'contact-resume-chip', icHref: 'Vivek_Yadav_Resume.pdf', emHref: 'Vivek_Yadav_Resume_EM.pdf' }
+  ];
+
+  const ROLE_LABELS = [
+    { id: 'hero-resume-label',    ic: 'Download Resume (PDF)',    em: 'Download EM Resume (PDF)' },
+    { id: 'contact-resume-label', ic: 'Resume (PDF)',             em: 'EM Resume (PDF)' }
+  ];
+
+  function applyRoleMode(mode) {
+    Object.entries(ROLE_CONTENT).forEach(([id, content]) => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = content[mode];
+    });
+    ROLE_HREFS.forEach(({ id, icHref, emHref }) => {
+      const el = document.getElementById(id);
+      if (el) el.href = mode === 'em' ? emHref : icHref;
+    });
+    ROLE_LABELS.forEach(({ id, ic, em }) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = mode === 'em' ? em : ic;
+    });
+    document.querySelectorAll('.role-pill-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+    localStorage.setItem('roleMode', mode);
+  }
+
+  const savedRole = localStorage.getItem('roleMode') || 'ic';
+  applyRoleMode(savedRole);
+
+  document.querySelectorAll('.role-pill-btn').forEach(b => {
+    b.addEventListener('click', () => applyRoleMode(b.dataset.mode));
   });
 </script>
 </body>

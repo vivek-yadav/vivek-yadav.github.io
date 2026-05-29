@@ -15,7 +15,7 @@ Senior Principal Software Engineer with 12+ years delivering enterprise-grade cl
 
 ### Progress Software — Senior Principal Software Engineer
 *Chef-360: DSM, Platform Services & Automate · Architecture Team (4) · 8 Teams · 60+ Engineers · Bengaluru*
-**Jan 2023 – Present**
+**Jan 2024 – Present**
 
 Lead architecture, design reviews, and engineering standards across Chef-360 — DSM, Platform Services, and Chef Automate — for 8 product teams (60+ engineers). Pioneered an end-to-end Agentic SDLC with human review checkpoints: a Product Manager Agent reviews Jira tickets and updates requirements; an Architect Agent produces or updates design docs; Backend and Frontend Dev Agents review requirements and design, create sub-tasks, and engage a Test Agent to plan test coverage before implementation begins; after implementation and test runs pass, the Architect Agent validates the work, a Product Agent reviews the summary, and a Security Agent performs a final review before a PR is raised for human team review. Backend and Frontend Dev Agents leverage the internal Code-Generation platform throughout to maintain deterministic scaffolding. All agents run on GitHub Copilot using Claude and ChatGPT LLM backends. Built the Code-Generation platform that produces production-ready Go microservices from OpenAPI specs, cutting new service bootstrap from ~3 days to under 4 hours (~10× faster) across 8+ active microservices. Owned Engineering Performance & Scaling: Kubernetes right-sizing, PostgreSQL/PGPool tuning, RabbitMQ optimisation — improving API throughput by ~35%, cutting P99 latency by ~40%, and reducing infrastructure cost by ~20%.
 
@@ -23,11 +23,11 @@ Lead architecture, design reviews, and engineering standards across Chef-360 —
 
 ---
 
-### Progress Software — Engineering Manager & Principal Software Engineer
-*Chef Automate · Team of 12 · Bengaluru*
+### Progress Software — Senior Engineering Manager
+*Chef Automate · 12 Direct Reports · 3 Squads · Bengaluru*
 **Jan 2021 – Dec 2023**
 
-Architected a unified API Gateway with AuthN/Z (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments. Scaled Chef Automate HA — deployed on bare metal and VMs via Habitat across 10+ machine clusters, managing 60,000+ Chef-managed nodes; implemented PostgreSQL HA meeting strict Disaster Recovery and security compliance requirements mandated by enterprise customers. Built Data Feed integrations with Splunk, ELK Stack, ServiceNow, Amazon S3, and custom webhooks — adopted by 150+ enterprise compliance teams to route Chef audit data to their preferred tooling. Led zero-downtime PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project. Managed 12 engineers across 3 squads — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM/QE collaboration.
+Directly managed 12 engineers across 3 squads, owning feature delivery, on-call rotations, hiring, performance reviews, career growth, and Agile ceremonies. Architected a unified API Gateway with AuthN/Z (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments. Scaled Chef Automate HA — deployed on bare metal and VMs via Habitat across 10+ machine clusters, managing 60,000+ Chef-managed nodes; implemented PostgreSQL HA meeting strict Disaster Recovery and security compliance requirements mandated by enterprise customers. Built Data Feed integrations with Splunk, ELK Stack, ServiceNow, Amazon S3, and custom webhooks — adopted by 150+ enterprise compliance teams to route Chef audit data to their preferred tooling. Led zero-downtime PostgreSQL and OpenSearch major upgrade cycles for the open-source Chef Automate project.
 
 **Stack:** Go · GoFiber · PostgreSQL · OpenSearch · NATS · Habitat · Docker · Buildkite · DexIdP · Keycloak
 
