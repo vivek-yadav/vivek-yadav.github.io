@@ -930,7 +930,7 @@
     { id: 'contact-resume-label', ic: 'Resume (PDF)',             em: 'EM Resume (PDF)' }
   ];
 
-  function applyRoleMode(mode) {
+  function applyRoleMode(mode, updateHistory) {
     Object.entries(ROLE_CONTENT).forEach(([id, content]) => {
       const el = document.getElementById(id);
       if (el) el.innerHTML = content[mode];
@@ -947,10 +947,18 @@
       b.classList.toggle('active', b.dataset.mode === mode);
     });
     localStorage.setItem('roleMode', mode);
+    if (updateHistory !== false) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('view', mode);
+      history.replaceState(null, '', url.toString());
+    }
   }
 
-  const savedRole = localStorage.getItem('roleMode') || 'ic';
-  applyRoleMode(savedRole);
+  // URL param takes priority over localStorage
+  const urlView = new URLSearchParams(window.location.search).get('view');
+  const initialRole = (urlView === 'ic' || urlView === 'em') ? urlView
+                    : (localStorage.getItem('roleMode') || 'ic');
+  applyRoleMode(initialRole, false);
 
   document.querySelectorAll('.role-pill-btn').forEach(b => {
     b.addEventListener('click', () => applyRoleMode(b.dataset.mode));
