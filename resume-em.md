@@ -39,7 +39,7 @@ Engineering leader with 12+ years building and scaling cloud-native platforms an
 ---
 
 ### Grofers India Pvt. Ltd. (now Blinkit) — SDE II & Team Lead
-*Supply Chain & Platform Engineering · Team of 10 · Gurugram*
+*Supply Chain & Platform Engineering · Team of 10 · Bengaluru*
 **Oct 2018 – Jan 2021**
 
 - Led a 10-engineer team across Retail Supply Chain, Inventory, and Warehouse Management, delivering ~15% higher order-fulfillment accuracy and ~18% lower inventory shrinkage across 15+ warehouses.

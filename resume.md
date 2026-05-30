@@ -44,7 +44,7 @@ Senior Principal Software Engineer with 12+ years building enterprise-grade, clo
 ---
 
 ### Grofers India Pvt. Ltd. (now Blinkit) — SDE II & Team Lead
-*Supply Chain & Platform Engineering · Team of 10 · Gurugram*
+*Supply Chain & Platform Engineering · Team of 10 · Bengaluru*
 **Oct 2018 – Jan 2021**
 
 - Led engineering for Retail Supply Chain, Inventory Management, and Warehouse Management, improving order-fulfillment accuracy ~15% and reducing inventory shrinkage ~18% across 15+ large warehouses.
