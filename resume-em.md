@@ -16,7 +16,7 @@ Engineering leader with 12+ years building and scaling cloud-native platforms an
 - **Leadership & Management:** Engineering Management, People Leadership (teams up to 12), Hiring & Mentoring, Performance & Career Development, Org-wide Engineering Standards, Roadmap & Delivery Planning, Stakeholder Management, Cross-functional Collaboration (Product / QE / Security), Agile / Scrum
 - **Engineering Strategy:** Architecture & Design Reviews, Platform Engineering, Distributed Systems, API Design (REST / gRPC), Domain-Driven Design, High Availability / Disaster Recovery, Performance & Cost Optimization
 - **AI & Developer Productivity:** Agentic SDLC, Multi-Agent Orchestration, LLM Integration, Code Generation, Internal Developer Platforms, GitHub Copilot, Anthropic Claude, OpenAI GPT
-- **Technical Foundation:** Go (Golang), Python, Java, JavaScript, Kubernetes, Docker, Helm, AWS, PostgreSQL, OpenSearch, NATS JetStream, Kafka, RabbitMQ, Redis, CI / CD, Prometheus, Grafana, OIDC / Keycloak, mTLS
+- **Technical Foundation:** Go (Golang), Python, Java, JavaScript, Kubernetes, Docker, Helm, AWS, PostgreSQL, OpenSearch, NATS JetStream, Kafka, RabbitMQ, Redis, CI / CD, Prometheus, Grafana, OIDC / Keycloak, mTLS, Service Mesh
 
 ---
 
@@ -32,7 +32,8 @@ Engineering leader with 12+ years building and scaling cloud-native platforms an
 - Introduced an end-to-end Agentic SDLC with human-in-the-loop checkpoints (a multi-agent pipeline on GitHub Copilot with Claude and GPT) to standardize requirements, design, implementation, and security review across teams.
 - Owned the engineering performance and scaling roadmap, improving API throughput ~35%, cutting P99 latency ~40%, and reducing infrastructure cost ~20%.
 - Partnered with Product, QE, and Security leadership on requirements, release readiness, and compliance across 500+ enterprise deployments.
-- Delivered a unified API Gateway (OIDC via DexIdP + Keycloak) and scaled Chef Automate HA to manage 60,000+ nodes, including zero-downtime PostgreSQL and OpenSearch major upgrades.
+- Delivered a unified API Gateway and service mesh (OIDC via DexIdP + Keycloak) and scaled Chef Automate HA to manage 60,000+ nodes, including zero-downtime PostgreSQL and OpenSearch major upgrades.
+- Contributed to open-source Chef Automate (github.com/chef/automate) — shipped production features, compliance integrations, and platform enhancements consumed by enterprise teams globally.
 
 **Stack:** Go · Kubernetes · OpenAPI · GitHub Copilot · Anthropic Claude · OpenAI GPT · PostgreSQL · PGPool · RabbitMQ · MinIO · Docker · Chef · GoFiber · OpenSearch · NATS · Habitat · Buildkite · DexIdP · Keycloak
 

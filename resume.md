@@ -17,7 +17,7 @@ Senior Principal Software Engineer with 12+ years building enterprise-grade, clo
 - **Distributed Systems & Backend:** Microservices, Event-Driven Architecture, API Design (REST / gRPC), Domain-Driven Design, High Availability, Disaster Recovery, Object Storage (S3 / MinIO)
 - **Cloud & Platform:** Kubernetes, Docker, Helm, CRDs, AWS (EC2 / ECS / RDS), GitOps, Platform Engineering, Internal Developer Platforms
 - **Data & Messaging:** PostgreSQL, PGPool, OpenSearch, MySQL, Redis, MongoDB, NATS JetStream, Kafka, RabbitMQ
-- **Security & Identity:** AuthN / AuthZ, OIDC, DexIdP, Keycloak, mTLS, API Gateway
+- **Security & Identity:** AuthN / AuthZ, OIDC, DexIdP, Keycloak, mTLS, API Gateway, Service Mesh
 - **AI Engineering:** Agentic SDLC, Multi-Agent Orchestration, LLM Integration, Prompt Engineering, Spec-Driven Development, Code Generation, GitHub Copilot, Anthropic Claude, OpenAI GPT
 - **DevOps & Observability:** CI / CD, Buildkite, Jenkins, Habitat, Prometheus, Grafana, PagerDuty, OpsGenie
 - **Leadership:** Architecture & Design Reviews, Technical Mentoring, Engineering Management, Agile / Scrum
@@ -34,8 +34,9 @@ Senior Principal Software Engineer with 12+ years building enterprise-grade, clo
 - Built an internal Code-Generation platform that produces production-ready Go microservices from OpenAPI specs, cutting new-service bootstrap from ~3 days to under 4 hours (~10x) across 8+ active microservices.
 - Designed an end-to-end Agentic SDLC with human-in-the-loop checkpoints — a multi-agent pipeline (Product, Architect, Backend / Frontend Dev, Test, and Security agents) running on GitHub Copilot with Claude and GPT backends — automating requirement review, design, implementation, and security sign-off before human PR review.
 - Owned engineering performance and scaling (Kubernetes right-sizing, PostgreSQL / PGPool and RabbitMQ tuning), improving API throughput ~35%, cutting P99 latency ~40%, and reducing infrastructure cost ~20%.
-- Architected a unified API Gateway with AuthN / AuthZ (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments.
+- Architected a unified API Gateway and service mesh with AuthN / AuthZ (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments.
 - Scaled Chef Automate HA on bare metal and VMs via Habitat across 10+ node clusters managing 60,000+ nodes; delivered PostgreSQL HA meeting enterprise DR and security compliance, and led zero-downtime PostgreSQL and OpenSearch major upgrades.
+- Contributed to open-source Chef Automate (github.com/chef/automate) — shipped production features, compliance integrations, and platform enhancements consumed by enterprise teams globally.
 - Built Data Feed integrations (Splunk, ELK, ServiceNow, Amazon S3, custom webhooks) adopted by 150+ enterprise compliance teams.
 - As Senior Engineering Manager (2021–2023), led 12 engineers across 3 squads — feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM / QE collaboration.
 

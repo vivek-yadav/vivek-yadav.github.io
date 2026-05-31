@@ -212,7 +212,7 @@
       <p><span class="cat">Distributed Systems &amp; Backend:</span> Microservices, Event-Driven Architecture, API Design (REST / gRPC), Domain-Driven Design, High Availability, Disaster Recovery, Object Storage (S3 / MinIO)</p>
       <p><span class="cat">Cloud &amp; Platform:</span> Kubernetes, Docker, Helm, CRDs, AWS (EC2 / ECS / RDS), GitOps, Platform Engineering, Internal Developer Platforms</p>
       <p><span class="cat">Data &amp; Messaging:</span> PostgreSQL, PGPool, OpenSearch, MySQL, Redis, MongoDB, NATS JetStream, Kafka, RabbitMQ</p>
-      <p><span class="cat">Security &amp; Identity:</span> AuthN / AuthZ, OIDC, DexIdP, Keycloak, mTLS, API Gateway</p>
+      <p><span class="cat">Security &amp; Identity:</span> AuthN / AuthZ, OIDC, DexIdP, Keycloak, mTLS, API Gateway, Service Mesh</p>
       <p><span class="cat">AI Engineering:</span> Agentic SDLC, Multi-Agent Orchestration, LLM Integration, Prompt Engineering, Spec-Driven Development, Code Generation, GitHub Copilot, Anthropic Claude, OpenAI GPT</p>
       <p><span class="cat">DevOps &amp; Observability:</span> CI / CD, Buildkite, Jenkins, Habitat, Prometheus, Grafana, PagerDuty, OpsGenie</p>
       <p><span class="cat">Leadership:</span> Architecture &amp; Design Reviews, Technical Mentoring, Engineering Management, Agile / Scrum</p>
@@ -233,8 +233,9 @@
         <li>Built an internal Code-Generation platform that produces production-ready Go microservices from OpenAPI specs, cutting new-service bootstrap from ~3 days to under 4 hours (~10x) across 8+ active microservices.</li>
         <li>Designed an end-to-end Agentic SDLC with human-in-the-loop checkpoints &mdash; a multi-agent pipeline (Product, Architect, Backend / Frontend Dev, Test, and Security agents) running on GitHub Copilot with Claude and GPT backends &mdash; automating requirement review, design, implementation, and security sign-off before human PR review.</li>
         <li>Owned engineering performance and scaling (Kubernetes right-sizing, PostgreSQL / PGPool and RabbitMQ tuning), improving API throughput ~35%, cutting P99 latency ~40%, and reducing infrastructure cost ~20%.</li>
-        <li>Architected a unified API Gateway with AuthN / AuthZ (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments.</li>
+        <li>Architected a unified API Gateway and service mesh with AuthN / AuthZ (OIDC via DexIdP + Keycloak) enforcing consistent identity across 5+ Chef Platform products and 500+ enterprise deployments.</li>
         <li>Scaled Chef Automate HA on bare metal and VMs via Habitat across 10+ node clusters managing 60,000+ nodes; delivered PostgreSQL HA meeting enterprise DR and security compliance, and led zero-downtime PostgreSQL and OpenSearch major upgrades.</li>
+        <li>Contributed to open-source Chef Automate (github.com/chef/automate) &mdash; shipped production features, compliance integrations, and platform enhancements consumed by enterprise teams globally.</li>
         <li>Built Data Feed integrations (Splunk, ELK, ServiceNow, Amazon S3, custom webhooks) adopted by 150+ enterprise compliance teams.</li>
         <li>As Senior Engineering Manager (2021&ndash;2023), led 12 engineers across 3 squads &mdash; feature delivery, on-call rotations, career growth, Agile ceremonies, and cross-functional PM / QE collaboration.</li>
       </ul>
