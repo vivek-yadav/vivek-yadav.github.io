@@ -15,7 +15,7 @@ Engineering leader with 12+ years building and scaling cloud-native platforms an
 
 - **Leadership & Management:** Engineering Management, People Leadership (teams up to 12), Hiring & Mentoring, Performance & Career Development, Org-wide Engineering Standards, Roadmap & Delivery Planning, Stakeholder Management, Cross-functional Collaboration (Product / QE / Security), Agile / Scrum
 - **Engineering Strategy:** Architecture & Design Reviews, Platform Engineering, Distributed Systems, API Design (REST / gRPC), Domain-Driven Design, High Availability / Disaster Recovery, Performance & Cost Optimization
-- **AI & Developer Productivity:** Agentic SDLC, Multi-Agent Orchestration, LLM Integration, Code Generation, Internal Developer Platforms, GitHub Copilot, Anthropic Claude, OpenAI GPT
+- **AI & Developer Productivity:** Agentic SDLC, Multi-Agent Orchestration, MCP Servers, LLM Integration, Code Generation, Internal Developer Platforms, GitHub Copilot, Anthropic Claude, OpenAI GPT
 - **Technical Foundation:** Go (Golang), Python, Java, JavaScript, Kubernetes, Docker, Helm, AWS, PostgreSQL, OpenSearch, NATS JetStream, Kafka, RabbitMQ, Redis, CI / CD, Prometheus, Grafana, OIDC / Keycloak, mTLS, Service Mesh
 
 ---
@@ -30,6 +30,7 @@ Engineering leader with 12+ years building and scaling cloud-native platforms an
 - Set architecture, design-review, and engineering standards adopted across 8 product teams (60+ engineers) spanning Chef-360 (DSM, Platform Services) and Chef Automate.
 - Led an org-wide developer-productivity initiative: built an internal Code-Generation platform producing production-ready Go microservices from OpenAPI specs, cutting new-service bootstrap from ~3 days to under 4 hours (~10x) across 8+ services.
 - Introduced an end-to-end Agentic SDLC with human-in-the-loop checkpoints (a multi-agent pipeline on GitHub Copilot with Claude and GPT) to standardize requirements, design, implementation, and security review across teams.
+- Built an MCP server for the internal AI Assistant, enabling context-aware querying of Node and Job execution details and AI-driven Job creation and execution; MCP tooling was routed through the existing API Gateway, inheriting user-level authorization enforcement across all actionable operations.
 - Owned the engineering performance and scaling roadmap, improving API throughput ~35%, cutting P99 latency ~40%, and reducing infrastructure cost ~20%.
 - Partnered with Product, QE, and Security leadership on requirements, release readiness, and compliance across 500+ enterprise deployments.
 - Delivered a unified API Gateway and service mesh (OIDC via DexIdP + Keycloak) and scaled Chef Automate HA to manage 60,000+ nodes, including zero-downtime PostgreSQL and OpenSearch major upgrades.
